@@ -1,0 +1,36 @@
+/*
+Quotes
+
+Styleguide 3.11
+*/
+
+/*
+Default Quote
+
+Markup:
+The following text <q>is an inline-quote</q>
+<blockquote>This text is a full quotation element</blockquote>
+
+Styleguide 3.11.1
+*/
+q {
+	/**
+	 * Sets consistent quote types.
+	 */
+	quotes: "\201C" "\201D" "\2018" "\2019";
+
+	@if $legacy-normalizecss {
+		&:before,
+		&:after {
+			/*
+			 * Addresses `quotes` property not supported in S4.
+			 */
+			content: '';
+			content: none;
+		}
+	}
+}
+blockquote {
+	@extend %u-m0;
+	@extend %u-mb;
+}

@@ -39,8 +39,8 @@ var Config = function() {
 	 * Paths
 	 */
 	this.paths = {
-		private: 'Src',
-		public: 'Dist',
+		private: 'Sources',
+		public: 'Web',
 		docs: 'Documentation'
 	};
 
@@ -61,8 +61,8 @@ var Config = function() {
 	 */
 	this.JavaScripts = {
 		paths: {
-			devDir: this.paths.private + '/Javascripts',
-			distDir: this.paths.public + '/Javascripts'
+			devDir: this.paths.private + '/JavaScript',
+			distDir: this.paths.public + '/JavaScript'
 		},
 		externals: []
 	};
@@ -83,10 +83,12 @@ var Config = function() {
 // Singleton.
 var config;
 
-module.exports = function() {
+module.exports = (function() {
+	'use strict';
+
 	if(!config) {
 		config = new Config();
 	}
 
 	return config;
-}();
+}());
