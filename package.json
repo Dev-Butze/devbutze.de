@@ -1,0 +1,56 @@
+{
+  "name": "devButze",
+  "description": "A microsite for presentational purposes of services from freelance developers around germany",
+  "version": "0.0.1",
+  "homepage": "http://devbutze.de/",
+  "author": {
+    "name": "Tyll Weiß",
+    "email": "inkdpixels@gmail.com",
+    "company": "",
+    "url": "https://github.com/Inkdpixels"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Inkdpixels/devButze.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Inkdpixels/devButze/issues"
+  },
+  "main": "Dist/index.html",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "browserify": "^4.2.0",
+    "grunt": "~0.4.2",
+    "grunt-autoprefixer": "~0.8.1",
+    "grunt-browserify": "^2.1.3",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-imagemin": "~0.7.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-karma": "^0.8.3",
+    "grunt-modernizr": "~0.5.1",
+    "jit-grunt": "~0.7.0",
+    "jshint-stylish": "~0.2.0",
+    "karma": "^0.12.16",
+    "karma-chrome-launcher": "^0.1.3",
+    "karma-commonjs": "0.0.10",
+    "karma-coverage": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-safari-launcher": "^0.1.1",
+    "load-grunt-configs": "~0.4.0",
+    "napa": "^0.4.1",
+    "time-grunt": "^0.4.0"
+  },
+  "scripts": {
+    "install": "napa",
+    "test": "grunt travis --verbose --env=travis"
+  },
+  "napa": {
+    "modernizr": "Modernizr/Modernizr#v2.8.3"
+  }
+}
