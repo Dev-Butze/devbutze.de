@@ -44,6 +44,7 @@
     "karma-safari-launcher": "^0.1.1",
     "load-grunt-configs": "~0.4.0",
     "napa": "^0.4.1",
+    "stripify": "^2.0.0",
     "time-grunt": "^0.4.0"
   },
   "scripts": {

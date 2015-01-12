@@ -26,7 +26,7 @@ module.exports = {
 	},
 	deploy: {
 		options: {
-			transform: ['stripify', 'uglifyify'] // Strip console.logs and uglify the build on deploy.
+			transform: ['stripify'] // Strip console.logs and uglify the build on deploy.
 		},
 		files: files
 	},
@@ -34,8 +34,7 @@ module.exports = {
 		options: {
 			debug: false,
 			external: null,
-			require: externals,
-			transform: ['uglifyify']
+			require: externals
 		},
 		files: vendorFile
 	}
