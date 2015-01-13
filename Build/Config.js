@@ -46,6 +46,17 @@ var Config = function() {
 
 
 	/*
+	 * Handlebars
+	 */
+	this.Html = {
+		paths: {
+			devDir: this.paths.private + '/Pages',
+			distDir: this.paths.public
+		}
+	};
+
+
+	/*
 	 * Stylesheets
 	 */
 	this.Sass = {
