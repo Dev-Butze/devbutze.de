@@ -51,6 +51,7 @@ var Config = function() {
 	this.Html = {
 		paths: {
 			devDir: this.paths.private + '/Pages',
+			partialDir: this.paths.private + '/Partials',
 			distDir: this.paths.public
 		}
 	};

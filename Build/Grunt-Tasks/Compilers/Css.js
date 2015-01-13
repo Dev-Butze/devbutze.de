@@ -1,5 +1,5 @@
 /**
- * CompileSass task.
+ * Compile Sass task.
  * (Re-)Compiles all Sass stylesheets.
  */
 

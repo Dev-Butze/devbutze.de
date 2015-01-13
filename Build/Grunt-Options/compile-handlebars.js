@@ -5,11 +5,13 @@
  */
 
 var config = require('../Config');
-console.log(config.Html)
+
 module.exports = {
 	site: {
-		"template": config.Html.paths.devDir + "/*.handlebars",
-		"templateData": config.Html.paths.devDir + "/*.json",
-		"output": config.Html.paths.distDir + "/*.html"
+		preHTML: config.Html.paths.partialDir + '/Header.html',
+      	postHTML: config.Html.paths.partialDir + '/Footer.html',
+		template: config.Html.paths.devDir + '/*.handlebars',
+		templateData: config.Html.paths.devDir + '/*.json',
+		output: config.Html.paths.distDir + '/*.html'
 	}
 };

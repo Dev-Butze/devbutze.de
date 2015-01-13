@@ -10,6 +10,10 @@ module.exports = {
 	options: {
 		nospawn: true
 	},
+	html: {
+		files: [config.Html.paths.devDir + '/**/*.handlebars'],
+		tasks: ['compile:html']
+	},
 	css: {
 		files: [config.Sass.paths.devDir + '/**/*.scss'],
 		tasks: ['compile:css']

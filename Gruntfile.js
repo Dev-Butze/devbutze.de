@@ -22,11 +22,10 @@ module.exports = function(grunt) {
 
 	/**
 	 * Default grunt task.
-	 * Compiles all .scss/.sass files with ':dev' options and
-	 * validates all js-files inside Resources/Private/Javascripts with JSHint.
+	 * Compiles the complete site with dev options.
 	 */
 	grunt.registerTask('default', function() {
-		grunt.task.run(['compile:css', 'jshint', 'compile:js']);
+		grunt.task.run(['compile:css', 'jshint', 'compile:js', 'compile:html']);
 	});
 
 
