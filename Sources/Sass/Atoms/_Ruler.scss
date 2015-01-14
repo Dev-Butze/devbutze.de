@@ -23,7 +23,7 @@ hr {
 	display: block;
 	height: 0;
 	border: 0;
-	border-top: 1px $basic-border-style $basic-border-color;
+	border-top: 1px solid color-adjust($content-background, 20%);
 	padding: 0;
 	@extend %u-m0;
 	@extend %u-mb;

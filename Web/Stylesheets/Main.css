@@ -1,5 +1,5 @@
 /*!
-* Stylesheets for http://devbutze.de/ - Built on: 2015-01-13 
+* Stylesheets for http://devbutze.de/ - Built on: 2015-01-14 
 * 
 * @package devButze
 * @author Tyll Weiß <inkdpixels@gmail.com>
@@ -386,16 +386,16 @@ body {
    * Remove default margin.
    */
   margin: 0;
-  font: 400 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 87.5%/1.71429 "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
-  color: #3c474b;
+  color: #4e5466;
   background: white;
 }
 
 .siteWrapper {
   margin-left: auto;
   margin-right: auto;
-  width: 60em;
+  width: 68.57143em;
   position: relative;
 }
 
@@ -422,14 +422,17 @@ Markup:
 Styleguide 2.5.1
 */
 .u-brand {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #0097d7;
+  font-family: "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #5aca10;
 }
 
 /*
 Brand color helpers
 
 .u-brandColor-primary - primary brand color.
+.u-brandColor-secondary - secondary brand color.
+.u-brandColor-tertiary - tertiary brand color.
+.u-brandColor-quaternary - quaternary brand color.
 
 Markup:
 <span class="{$modifiers}">Brand color helpers.</span>
@@ -437,7 +440,19 @@ Markup:
 Styleguide 2.5.2
 */
 .u-brandColor-primary {
-  color: #0097d7;
+  color: #5aca10;
+}
+
+.u-brandColor-secondary {
+  color: #c5fd73;
+}
+
+.u-brandColor-tertiary {
+  color: #4e5466;
+}
+
+.u-brandColor-quaternary {
+  color: #29334c;
 }
 
 /*
@@ -449,7 +464,7 @@ Markup:
 Styleguide 2.5.3
 */
 .u-brandFace {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -464,7 +479,7 @@ Styleguide 2.5.4
   display: inline-block;
   width: 200px;
   height: 200px;
-  background: url(../Images/brandLogo.png);
+  background: url(../Images/BrandLogo.svg);
 }
 
 /*
@@ -1010,8 +1025,6 @@ Styleguide 3.1.1
 */
 h1, h2, h3,
 h4, h5, h6 {
-  font-weight: 700;
-  color: black;
   /**
    * Optimized kerning for large font sizes
    * use this only on large font-sizes (f.e. headings) to avoid performance issues.
@@ -1040,23 +1053,23 @@ Markup:
 Styleguide 3.1.2
 */
 h1, .h1 {
-  font-size: 36px;
+  font-size: 50px;
 }
 
 h2, .h2 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 h3, .h3 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 h4, .h4 {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 h5, .h5 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 h6, .h6 {
@@ -1128,7 +1141,7 @@ Styleguide 3.2.5
 */
 mark {
   /* Addresses styling not present in IE6/7/8/9. */
-  background: #0097d7;
+  background: #5aca10;
   color: white;
 }
 
@@ -1176,13 +1189,13 @@ Text-Selection
 */
 ::-moz-selection,
 ::-moz-selection {
-  background: #0097d7;
+  background: #5aca10;
   color: white;
   text-shadow: none;
 }
 ::-moz-selection,
 ::selection {
-  background: #0097d7;
+  background: #5aca10;
   color: white;
   text-shadow: none;
 }
@@ -1205,7 +1218,7 @@ Markup:
 Styleguide 3.3.1
 */
 a {
-  color: #0097d7;
+  color: #5aca10;
   text-decoration: none;
   /**
    * Remove the gray background color from active links in IE 10.
@@ -1263,7 +1276,7 @@ Styleguide 3.5.1
 menu,
 ol,
 ul {
-  padding: 0 0 0 2.5em;
+  padding: 0 0 0 2.85714em;
 }
 
 li > ul,
@@ -1360,9 +1373,8 @@ Styleguide 3.6.2
 legend {
   display: block;
   width: 100%;
-  font-size: 20px;
-  font-size: 1.25rem;
-  color: black;
+  font-size: 18px;
+  font-size: 1.125rem;
   border-bottom: 1px solid #cccccc;
   padding: 0;
 }
@@ -1398,7 +1410,7 @@ Styleguide 3.7.1
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   font-size: 14px;
   font-size: 0.875rem;
-  color: #475459;
+  color: #596074;
 }
 
 textarea {
@@ -1467,12 +1479,12 @@ Styleguide 3.8.1
   /**
    * Set in em's so we can change the size of the button depending on the font-size.
    */
-  padding: 0.5em 0.75em;
+  padding: .5em .75em;
   border: 0;
-  background: #0097d7;
+  background: #5aca10;
   border-radius: 1px;
   cursor: pointer;
-  font-size: 0.8em;
+  font-size: .8em;
   /**
    * Normalize some rules accross the targeted elements (<input>, <button> and the .btn class).
    */
@@ -1625,8 +1637,8 @@ figure {
 
 figcaption {
   /* 6 */
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 /*

@@ -40,8 +40,7 @@ legend {
 	@extend %u-mb;
 
 	@include font-size($base-font-size + 4);
-	color: map-get($headings, color);
-	border-bottom: 1px $basic-border-style $basic-border-color;
+	border-bottom: 1px solid color-adjust($content-background, 20%);
 
 	padding: 0;
 	@if $legacy-normalizecss {

@@ -64,11 +64,11 @@ td { vertical-align: top; }
 
 %table--bordered,
 .table--bordered {
-	border: 1px solid $basic-border-color;
+	border: 1px solid color-adjust($content-background, 20%);
 	border-collapse: separate;
 	td, th {
-		border-left: 1px solid $basic-border-color;
-		border-bottom: 1px solid $basic-border-color;
+		border-left: 1px solid color-adjust($content-background, 20%);
+		border-bottom: 1px solid color-adjust($content-background, 20%);
 		&:first-child { border-left: 0; }
 	}
 	tr:last-child > td { border-bottom: 0; }
@@ -76,7 +76,7 @@ td { vertical-align: top; }
 
 %table--striped,
 .table--striped {
-	td, th { border-bottom: 1px solid $basic-border-color; }
+	td, th { border-bottom: 1px solid color-adjust($content-background, 20%); }
 	th { padding-top: 0; }
 }
 

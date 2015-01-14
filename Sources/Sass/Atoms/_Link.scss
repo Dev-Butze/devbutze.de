@@ -18,7 +18,7 @@ Markup:
 Styleguide 3.3.1
 */
 a {
-	color: $link-color;
+	color: map-get($brand-colors, primary);
 	text-decoration: none;
 	/**
 	 * Remove the gray background color from active links in IE 10.

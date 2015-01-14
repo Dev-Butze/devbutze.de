@@ -10,15 +10,8 @@
 // =============================================================================
 // Project settings
 // =============================================================================
-// The template-root path, used to generate the box-sizing.htc path,
-// this has to be relative to the .html document.
-$template-path:         "typo3conf/ext/#{ext_directory()}/";
-
 // Set the box-sizing of all elements to 'border-box'.
 $global-border-box:     true;
-
-// Is this project a responsive one?
-$responsive:            false;
 
 // Browser support for 'false':
 // Google Chrome
@@ -36,26 +29,25 @@ $direction:             ltr;
 // =============================================================================
 // Brand related variables
 // =============================================================================
-// Your brand colors, for each of these keys, a class text-color helper-class will be generated.
+// Your brand colors, for each of these keys, a text-color helper-class will be generated.
 // f.e. `.brandColor-primary { color: #0097d7; }`
 $brand-colors: (
-	primary: #0097d7
+	primary: #5aca10,
+	secondary: #c5fd73,
+	tertiary: #4e5466,
+	quaternary: #29334c
 );
 
 // Your main brand Font-Family
-$brand-font-family:     "Helvetica Neue", Helvetica, Arial, sans-serif;
+$brand-font-family:     "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // If your layout makes use of rounded corners, you can specify an Border-Radius
 // here to have a consistent setting.
 $brand-border-radius:   1px;
 
-// If you want to use the image-replacement technique for your brand logo,
-// set the 'image' key to the image-name of your brand logo e.g.:
-// $brand-logo: (image: 'logo.png', width: 200px, height: 200px);
-//
-// Be aware that you need to specify the dimensions of your logo, otherwise it won't be displayed.
+// The brands main logo file.
 $brand-logo: (
-  image: 'brandLogo.png',
+  image: 'BrandLogo.svg',
   width: 200px,
   height: 200px
 );
@@ -65,7 +57,7 @@ $brand-logo: (
 // Base Typesetting
 // =============================================================================
 // Font-family stack variables to standardize the font-setting
-$sans-font-family:      "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-font-family:      $brand-font-family;
 $serif-font-family:     Georgia, "Times New Roman", Times, serif;
 $mono-font-family:      Menlo, Monaco, Consolas, "Courier New", monospace; // Will be set on elements like <code> etc.
 
@@ -76,27 +68,16 @@ $light:                 300;
 
 // Base font settings which will be set on the '<body>' element,
 // '$base-font-size' and '$base-line-height' are pixel values.
-$base-font-size:        16;
+$base-font-size:        14;
 $base-line-height:      24;
 $base-font-family:      $sans-font-family;
 $base-font-weight:      $regular;
-$base-text-color:       #3C474B;
+$base-text-color:       map-get($brand-colors, tertiary);
 
 // Typographic spacings (in pixels), these default values will
 // output a basic vertical rythm based on your '$base-line-height'.
 $basic-spacing:         $base-line-height;
 $half-spacing:          $basic-spacing / 2;
-
-
-// =============================================================================
-// Headings
-// =============================================================================
-// Default settings for all heading elements.
-$headings: (
-	fontFamily:           false, // 'false' will use the inherited font-family, f.e. $base-font-family.
-	fontWeight:           $bold,
-	color:                #000
-);
 
 
 // =============================================================================
@@ -124,42 +105,3 @@ $content-background:    #fff;
 // default units for media-query mixins - it must include a digit e.g.:
 // $mq-unit: 1em; or $mq-unit: 1px;
 $mq-unit:               1px;
-
-
-// =============================================================================
-// Design related variables
-// =============================================================================
-// Default color for all anchors and links.
-$link-color:            map-get($brand-colors, primary);
-
-// Default styling for horizontal rules and bordered elements like tables.
-$basic-border-color:    color-adjust($content-background, 20%);
-$basic-border-style:    solid;
-
-
-// =============================================================================
-// Forms
-// =============================================================================
-// The height of the element itself.
-$textInput: (
-	height:               $base-line-height +px,
-	bottomSpacing:        $half-spacing,
-	border:               1px solid $basic-border-color,
-	borderRadius:         $brand-border-radius,
-	boxShadow:            inset 0 1px 1px rgba(#000, 0.075),
-	fontSize:             14,
-	textColor:            lighten($base-text-color, 5%)
-);
-
-
-// =============================================================================
-// Buttons
-// =============================================================================
-// The basic bottom-margin on all text-inputs.
-$button: (
-	bottomSpacing:        $half-spacing,
-	innerPadding:         .5em .75em, // Set in em's so we can change the size of the button depending on the font-size.
-	fontSize:             .8em,
-	background:           map-get($brand-colors, primary),
-	textColor:            color-adjust(map-get($brand-colors, primary), 100%)
-);
