@@ -44,18 +44,15 @@ var Config = function() {
 		docs: 'Documentation'
 	};
 
-
 	/*
-	 * Handlebars
+	 * HTML
 	 */
-	this.Html = {
+	this.HTML = {
 		paths: {
 			devDir: this.paths.private + '/Pages',
-			partialDir: this.paths.private + '/Partials',
 			distDir: this.paths.public
 		}
 	};
-
 
 	/*
 	 * Stylesheets

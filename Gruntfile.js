@@ -15,9 +15,7 @@ module.exports = function(grunt) {
 	grunt.initConfig(gruntOptionsObj);
 
 	// Load all grunt-plugins that are specified in the 'package.json' file.
-	require('jit-grunt')(grunt, {
-		'compile-handlebars': 'grunt-compile-handlebars'
-	});
+	require('jit-grunt')(grunt);
 
 
 	/**
@@ -25,7 +23,7 @@ module.exports = function(grunt) {
 	 * Compiles the complete site with dev options.
 	 */
 	grunt.registerTask('default', function() {
-		grunt.task.run(['compile:css', 'jshint', 'compile:js', 'compile:html']);
+		grunt.task.run(['compile:html', 'compile:css', 'jshint', 'compile:js']);
 	});
 
 
