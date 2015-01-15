@@ -62,4 +62,19 @@ Styleguide 2.5.4
   width: map-get($brand-logo, width);
   height: map-get($brand-logo, height);
   background: image-url(map-get($brand-logo, image));
+  background-size: cover;
+  background-position: center center;
+}
+.u-brandLogo--black {
+  background-position: top center;
+}
+.u-brandLogo--regular {
+  background-position: center center;
+}
+.u-brandLogo--white {
+  background-position: bottom center;
+}
+.u-brandLogo--large {
+  width: map-get($brand-logo, width)*2;
+  height: map-get($brand-logo, height)*2;
 }

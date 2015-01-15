@@ -23,6 +23,7 @@ Styleguide 3.1.1
 %heading,
 h1, h2, h3,
 h4, h5, h6 {
+    font-family: $interstateRegular;
 	/**
 	 * Optimized kerning for large font sizes
 	 * use this only on large font-sizes (f.e. headings) to avoid performance issues.

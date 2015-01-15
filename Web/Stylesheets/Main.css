@@ -386,7 +386,7 @@ body {
    * Remove default margin.
    */
   margin: 0;
-  font: 400 87.5%/1.71429 "InterstateRegular", "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 87.5%/1.71429 "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
   color: #4e5466;
   background: white;
@@ -422,7 +422,7 @@ Markup:
 Styleguide 2.5.1
 */
 .u-brand {
-  font-family: "InterstateRegular", "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #5aca10;
 }
 
@@ -464,7 +464,7 @@ Markup:
 Styleguide 2.5.3
 */
 .u-brandFace {
-  font-family: "InterstateRegular", "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -477,9 +477,28 @@ Styleguide 2.5.4
 */
 .u-brandLogo {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  background: url(../Images/BrandLogo.svg);
+  width: 180px;
+  height: 26px;
+  background: url(../Images/BrandLogos.svg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.u-brandLogo--black {
+  background-position: top center;
+}
+
+.u-brandLogo--regular {
+  background-position: center center;
+}
+
+.u-brandLogo--white {
+  background-position: bottom center;
+}
+
+.u-brandLogo--large {
+  width: 360px;
+  height: 52px;
 }
 
 /*
@@ -1025,6 +1044,7 @@ Styleguide 3.1.1
 */
 h1, h2, h3,
 h4, h5, h6 {
+  font-family: "InterstateRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   /**
    * Optimized kerning for large font sizes
    * use this only on large font-sizes (f.e. headings) to avoid performance issues.

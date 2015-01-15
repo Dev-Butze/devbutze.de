@@ -39,17 +39,18 @@ $brand-colors: (
 );
 
 // Your main brand Font-Family
-$brand-font-family:     "InterstateRegular", "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$brand-font-family:     "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$interstateRegular:     "InterstateRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// If your layout makes use of rounded corners, you can specify an Border-Radius
+  // If your layout makes use of rounded corners, you can specify an Border-Radius
 // here to have a consistent setting.
 $brand-border-radius:   1px;
 
 // The brands main logo file.
 $brand-logo: (
-  image: 'BrandLogo.svg',
-  width: 200px,
-  height: 200px
+  image: 'BrandLogos.svg',
+  width: 180px,
+  height: 26px
 );
 
 
