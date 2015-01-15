@@ -18,12 +18,12 @@ module.exports = {
 		files: [config.Sass.paths.devDir + '/**/*.scss'],
 		tasks: ['compile:css']
 	},
-	jshint: {
-		files: ['<%= jshint.files %>'],
-		tasks: ['jshint']
-	},
 	js: {
 		files: [config.JavaScripts.paths.devDir + '/**/*.js'],
 		tasks: ['compile:js']
+	},
+	jshint: {
+		files: ['<%= jshint.files %>'],
+		tasks: ['jshint']
 	}
 };

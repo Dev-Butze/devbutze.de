@@ -1,5 +1,5 @@
 /*!
-* Stylesheets for http://devbutze.de/ - Built on: 2015-01-14 
+* Stylesheets for http://devbutze.de/ - Built on: 2015-01-15 
 * 
 * @package devButze
 * @author Tyll Weiß <inkdpixels@gmail.com>
@@ -386,7 +386,7 @@ body {
    * Remove default margin.
    */
   margin: 0;
-  font: 400 87.5%/1.71429 "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 87.5%/1.71429 "InterstateRegular", "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
   color: #4e5466;
   background: white;
@@ -422,7 +422,7 @@ Markup:
 Styleguide 2.5.1
 */
 .u-brand {
-  font-family: "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "InterstateRegular", "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #5aca10;
 }
 
@@ -464,7 +464,7 @@ Markup:
 Styleguide 2.5.3
 */
 .u-brandFace {
-  font-family: "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "InterstateRegular", "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*

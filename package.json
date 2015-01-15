@@ -33,6 +33,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-karma": "^0.8.3",
     "grunt-modernizr": "~0.5.1",
+    "grunt-webfontjson": "0.0.4",
     "jit-grunt": "~0.7.0",
     "jshint-stylish": "~0.2.0",
     "karma": "^0.12.16",

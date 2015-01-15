@@ -87,6 +87,16 @@ var Config = function() {
 			distDir: this.paths.public + '/Images'
 		}
 	};
+
+	/*
+	 * WebFonts
+	 */
+	this.WebFonts = {
+		paths: {
+			devDir: this.paths.private + '/WebFonts',
+			distDir: this.paths.public + '/WebFonts'
+		}
+	};
 };
 
 // Singleton.
@@ -95,9 +105,7 @@ var config;
 module.exports = (function() {
 	'use strict';
 
-	if(!config) {
-		config = new Config();
-	}
+	config = config || new Config();
 
 	return config;
 }());
