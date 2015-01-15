@@ -9,12 +9,13 @@ var config = require('../Config');
 module.exports = {
 	images : {
 		options : {
-			optimizationLevel: config.Images.optimizationLevel
+			optimizationLevel: config.Images.optimizationLevel,
+            svgoPlugins: [{ removeViewBox: false }]
 		},
 		files: [{
 			expand: true,
-			cwd: config.Images.paths.tempDir,
-			src: ['**/*.{png,jpg,gif}'],
+			cwd: config.Images.paths.devDir,
+			src: ['**/*.{png,jpg,gif,svg}'],
 			dest: config.Images.paths.distDir
 		}]
 	}
