@@ -6,8 +6,6 @@ Helper classes for brand related stylings.
 Styleguide 2.5
 */
 
-
-
 /*
 Brand text styles
 
@@ -18,8 +16,8 @@ Styleguide 2.5.1
 */
 %u-brand,
 .u-brand {
-	font-family: $brand-font-family;
-	color: map-get($brand-colors, primary);
+  font-family: $brand-font-family;
+  color: map-get($brand-colors, primary);
 }
 
 /*
@@ -32,9 +30,9 @@ Markup:
 Styleguide 2.5.2
 */
 @each $key, $value in $brand-colors {
-	.u-brandColor-#{$key} {
-		color: $value;
-	}
+  .u-brandColor-#{$key} {
+    color: $value;
+  }
 }
 
 /*
@@ -46,7 +44,9 @@ Markup:
 Styleguide 2.5.3
 */
 %u-brandFace,
-.u-brandFace { font-family: $brand-font-family; }
+.u-brandFace {
+  font-family: $brand-font-family;
+}
 
 /*
 Brand logos
@@ -65,15 +65,19 @@ Styleguide 2.5.4
   background-size: cover;
   background-position: center center;
 }
+
 .u-brandLogo--black {
   background-position: top center;
 }
+
 .u-brandLogo--regular {
   background-position: center center;
 }
+
 .u-brandLogo--white {
   background-position: bottom center;
 }
+
 .u-brandLogo--large {
   width: map-get($brand-logo, width)*2;
   height: map-get($brand-logo, height)*2;

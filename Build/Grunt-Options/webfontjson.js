@@ -12,9 +12,9 @@ module.exports = {
 			filename: config.WebFonts.paths.distDir + '/DevButze.woff.json',
 			callback: 'devButzeAttachFonts',
 			fonts: [{
-				'font-family': 'InterstateLight',
-				'font-weight': 'normal',
-				file: config.WebFonts.paths.devDir + '/interstate_light-webfont.woff',
+				'font-family': 'InterstateExtraLight',
+				'font-weight': '300',
+				file: config.WebFonts.paths.devDir + '/interstate_extraLight-webfont.woff',
 				format: 'woff'
 			}, {
 				'font-family': 'InterstateRegular',
@@ -29,9 +29,9 @@ module.exports = {
 			filename: config.WebFonts.paths.distDir + '/DevButze.woff2.json',
 			callback: 'devButzeAttachFonts',
 			fonts: [{
-				'font-family': 'InterstateLight',
-				'font-weight': 'normal',
-				file: config.WebFonts.paths.devDir + '/interstate_light-webfont.woff2',
+				'font-family': 'InterstateExtraLight',
+				'font-weight': '300',
+				file: config.WebFonts.paths.devDir + '/interstate_extraLight-webfont.woff2',
 				format: 'woff'
 			}, {
 				'font-family': 'InterstateRegular',

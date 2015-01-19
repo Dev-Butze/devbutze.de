@@ -6,7 +6,6 @@ Basic styling for headings and sub-headings.
 Styleguide 3.1
 */
 
-
 /*
 Headings
 
@@ -21,14 +20,16 @@ Markup:
 Styleguide 3.1.1
 */
 %heading,
-h1, h2, h3,
-h4, h5, h6 {
-    font-family: $interstateRegular;
-	/**
-	 * Optimized kerning for large font sizes
-	 * use this only on large font-sizes (f.e. headings) to avoid performance issues.
-	 */
-	text-rendering: optimizeLegibility;
+.h1, .h2, .h3,
+.h4, .h5, .h6 {
+  font-family: $brand-font-family;
+  line-height: 1.1;
+  /**
+   * Optimized kerning for large font sizes
+   * use this only on large font-sizes (f.e. headings) to avoid performance issues.
+   */
+  text-rendering: optimizeLegibility;
+
 }
 
 /*
@@ -51,21 +52,27 @@ Markup:
 
 Styleguide 3.1.2
 */
-h1, .h1, %h1 {
-	font-size: 50px;
+.h1, %h1 {
+  font-size: 50px;
 }
-h2, .h2, %h2 {
-	font-size: 40px;
+
+.h2, %h2 {
+  font-size: 40px;
 }
-h3, .h3, %h3 {
-	font-size: 30px;
+
+.h3, %h3 {
+  font-size: 30px;
 }
-h4, .h4, %h4 {
-	font-size: 24px;
+
+.h4, %h4 {
+  font-size: 24px;
 }
-h5, .h5, %h5 {
-	font-size: 20px;
+
+.h5, %h5 {
+  font-size: 20px;
 }
-h6, .h6, %h6 {
-	font-size: 16px;
+
+.h6, %h6 {
+  font-size: 16px;
+  margin-bottom: .75em;
 }

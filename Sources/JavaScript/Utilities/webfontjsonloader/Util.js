@@ -120,7 +120,6 @@
         // Setup the script element.
         script.type = 'text/javascript';
         script.src = url;
-        console.log(url, this);
 
         // Load the JSONP.
         headElement.appendChild(script);

@@ -4,7 +4,6 @@ Layout utilities
 Styleguide 2.1
 */
 
-
 /*
 Float helpers
 
@@ -18,14 +17,13 @@ Styleguide 2.1.1
 */
 %u-floatRight,
 .u-floatRight {
-    float: right;
+  float: right;
 }
 
 %u-floatLeft,
 .u-floatLeft {
-    float: left;
+  float: left;
 }
-
 
 /*
 Float clearfix
@@ -40,12 +38,16 @@ Styleguide 2.1.2
 %u-cf,
 .u-cf,
 .u-clearfix {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.u-rounded {
+  border-radius: 100%;
 }

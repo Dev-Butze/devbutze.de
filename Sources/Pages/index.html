@@ -1,19 +1,102 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>DevButze</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="Stylesheets/Main.css">
 		<script type="text/javascript" src="JavaScript/Head.min.js"></script>
 	</head>
 	<body>
-		<header role="banner">
-            <a href="/" class="u-brandLogo"></a>
+		<header class="siteHeader" role="banner">
+            <div class="siteWrapper">
+                <a href="/" class="siteHeader__logo">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="DevButze" class="u-brandLogo u-brandLogo--white">
+                </a>
+                <nav role="navigation">
+                    <ul class="nav siteHeader__siteNav">
+                        <li><a href="">Start</a></li>
+                        <li><a href="">Über DevButze</a></li>
+                        <li><a href="">Wer wir sind</a></li>
+                        <li><a href="">Technologien</a></li>
+                        <li><a href="">Referenzen</a></li>
+                        <li><a href="">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
 		</header>
-		<main role="main">
-
+		<main class="siteContent" role="main">
+			<section class="stage">
+                <div class="stage__background">
+                    <img src="Images/Keyvisual_welcome.jpg">
+                </div>
+                <div class="stage__content stage__content--centered stage__content--invert stage__content--shadowed">
+                    <h1 class="h1"><b>Willkommen.</b><br>
+                    <span class="h3">Auf devButze.de - Dem IT-Dientleister für Agenturen.</span></h1>
+                </div>
+			</section>
+            <section class="stage">
+                <div class="stage__content stage__content--centered">
+                    <div class="siteWrapper">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="DevButze" class="u-brandLogo u-brandLogo--regular u-brandLogo--large u-mb">
+                        <p>Wir von den Kellerkindern sind ein Zusammenschluss von sechs Freelancern unter dem Dach einer Gesellschaft um Kunden eine ganzheitliche Betreuung im IT-Bereich zu garantieren. Neben der Konzeption und Umsetzung von Individualentwicklungen auf Basis von Symfony 2, Silex und purem PHP entwickeln wir für Magento sowie TYPO3 CMS und TYPO3 Neos.</p>
+                        <p>Zu unseren Kunden zählen vor allem Web-Agenturen jeder Größe um Kapazitätsengpässe zu überbrücken oder eigenen Kunden Lösungen anzubieten, die inHouse nicht oder noch nicht verfügbar sind.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="stage stage--primary stage--shadowed">
+                <div class="stage__content stage__content--centered stage__content--invert">
+                    <h1 class="h1">Wer wir sind</h1>
+                    <div class="siteWrapper">
+                        <div class="g">
+                            <div class="gi u-w1/3">
+                                <img src="Images/Avatar_1.jpg" alt="" class="u-rounded u-mb" />
+                                <h3 class="h6">Christoph</h3>
+                                <p>Backend-Entwickler<br>
+                                    Karlsruhe/Deutschland</p>
+                            </div>
+                            <div class="gi u-w1/3">
+                                <img src="Images/Avatar_2.jpg" alt="" class="u-rounded u-mb" />
+                                <h3 class="h6">Christoph</h3>
+                                <p>Backend-Entwickler<br>
+                                    Karlsruhe/Deutschland</p>
+                            </div>
+                            <div class="gi u-w1/3">
+                                <img src="Images/Avatar_3.jpg" alt="" class="u-rounded u-mb" />
+                                <h3 class="h6">Christoph</h3>
+                                <p>Backend-Entwickler<br>
+                                    Karlsruhe/Deutschland</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="stage">
+                <div class="stage__content stage__content--centered">
+                    <h1 class="h1">Wir arbeiten mit</h1>
+                </div>
+            </section>
+            <section class="stage stage--invert">
+                <div class="stage__content stage__content--centered stage__content--invert">
+                    <h1 class="h1">Unsere Kunden</h1>
+                </div>
+            </section>
+            <section class="stage">
+                <div class="stage__background">
+                    <img src="Images/Keyvisual_contact.jpg">
+                </div>
+                <div class="stage__content stage__content--centered stage__content--invert">
+                    <h1 class="h1">Kontakt</h1>
+                    <p>Wenn wir dich in deiner Firma oder Agentur unterstützen können, melde dich bei uns:</p>
+                    <a class="btn btn--solid" href="mailto:hallo@devbutze.de">hallo@devbutze.de</a>
+                </div>
+            </section>
 		</main>
-		<footer role="contentinfo">
-
+		<footer class="siteFooter" role="contentinfo">
+            <div class="siteWrapper u-alignCenter">
+                Hier findest du unser <a href="">Impressum</a>.
+            </div>
 		</footer>
 
 		<script type="text/javascript" src="JavaScript/Vendor.min.js"></script>

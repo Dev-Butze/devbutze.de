@@ -18,20 +18,21 @@ Markup:
 
 Styleguide 4.1.1
 */
-$grid-direction:  $start;
+$grid-direction: $start;
 
 %grid,
 .g,
 .grid {
-	@extend .u-cf;
-	margin-left: -($column-gutter / 2);
-	margin-right: -($column-gutter / 2);
+  @extend .u-cf;
+  margin-left: -($column-gutter / 2);
+  margin-right: -($column-gutter / 2);
 }
+
 %grid__item,
 .gi,
 .grid__item {
-	// Base styles for .gi--# classes
-	float: $grid-direction;
-	padding-left: ($column-gutter / 2);
-	padding-right: ($column-gutter / 2);
+  // Base styles for .gi--# classes
+  float: $grid-direction;
+  padding-left: ($column-gutter / 2);
+  padding-right: ($column-gutter / 2);
 }

@@ -1,25 +1,17 @@
 @charset "UTF-8";
 
-
 /*
 SASS Functions, Mixins and Variables
 
 Styleguide 1
 */
-@import "_Settings/_Index",
-	"_Variables";
-
-
+@import "_Settings/_Index", "_Variables";
 /*
 Generic rules
 
 Resets and other generic stuff.
 */
-@import "Generic/_Head",
-        "Generic/_Normalize",
-        "Generic/_Base";
-
-
+@import "Generic/_Head", "Generic/_Normalize", "Generic/_Base";
 /*
 Utilities
 
@@ -27,14 +19,7 @@ Utilitie classes which can be used independently from each other to create simpl
 
 Styleguide 2
 */
-@import "Utilities/_Brand",
-        "Utilities/_Display",
-        "Utilities/_Layout",
-        "Utilities/_Spacings",
-        "Utilities/_Typography",
-        "Utilities/_Widths";
-
-
+@import "Utilities/_Brand", "Utilities/_Display", "Utilities/_Layout", "Utilities/_Spacings", "Utilities/_Typography", "Utilities/_Widths";
 /*
 Atoms
 
@@ -42,19 +27,7 @@ Atoms are basic tags, such as form labels, inputs or buttons.
 
 Styleguide 3
 */
-@import "Atoms/_Heading",
-        "Atoms/_Typography",
-        "Atoms/_Link",
-        "Atoms/_List",
-        "Atoms/_Label",
-        "Atoms/_Input",
-        "Atoms/_Button",
-        "Atoms/_Code",
-        "Atoms/_Quote",
-        "Atoms/_Ruler",
-        "Atoms/_Media",
-        "Atoms/_Table";
-
+@import "Atoms/_Heading", "Atoms/_Typography", "Atoms/_Link", "Atoms/_List", "Atoms/_Label", "Atoms/_Input", "Atoms/_Button", "Atoms/_Code", "Atoms/_Quote", "Atoms/_Ruler", "Atoms/_Media", "Atoms/_Table";
 /*
 Molecules
 
@@ -62,19 +35,13 @@ Mlecules are groups of elements that function together as a unit. For example, a
 
 Styleguide 4
 */
-@import "Molecules/_Form",
-        "Molecules/_Navigation",
-        "Molecules/_Grid";
-
+@import "Molecules/_Form", "Molecules/_Grid", "Molecules/_Navigation", "Molecules/_Stage";
 /*
 Organisms
 
 Organisms are groups of molecules (and possibly atoms) joined together to form distinct section of an interface.
 */
-@import "Organisms/SiteHeader",
-        "Organisms/SiteFooter";
-
-
+@import "Organisms/SiteHeader", "Organisms/SiteFooter";
 /*
 Templates
 */

@@ -1,5 +1,5 @@
 /*!
-* Stylesheets for http://devbutze.de/ - Built on: 2015-01-15 
+* Stylesheets for http://devbutze.de/ - Built on: 2015-01-19 
 * 
 * @package devButze
 * @author Tyll Weiß <inkdpixels@gmail.com>
@@ -386,7 +386,7 @@ body {
    * Remove default margin.
    */
   margin: 0;
-  font: 400 87.5%/1.71429 "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 87.5%/1.71429 "InterstateExtraLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
   color: #4e5466;
   background: white;
@@ -395,7 +395,7 @@ body {
 .siteWrapper {
   margin-left: auto;
   margin-right: auto;
-  width: 68.57143em;
+  width: 90%;
   position: relative;
 }
 
@@ -422,7 +422,7 @@ Markup:
 Styleguide 2.5.1
 */
 .u-brand {
-  font-family: "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "InterstateExtraLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #5aca10;
 }
 
@@ -433,6 +433,8 @@ Brand color helpers
 .u-brandColor-secondary - secondary brand color.
 .u-brandColor-tertiary - tertiary brand color.
 .u-brandColor-quaternary - quaternary brand color.
+.u-brandColor-quinary - quinary brand color.
+.u-brandColor-senary - senary brand color.
 
 Markup:
 <span class="{$modifiers}">Brand color helpers.</span>
@@ -455,6 +457,14 @@ Styleguide 2.5.2
   color: #29334c;
 }
 
+.u-brandColor-quinary {
+  color: #6d7073;
+}
+
+.u-brandColor-senary {
+  color: #242425;
+}
+
 /*
 Brand font-family helper
 
@@ -464,7 +474,7 @@ Markup:
 Styleguide 2.5.3
 */
 .u-brandFace {
-  font-family: "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "InterstateExtraLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -584,6 +594,10 @@ Styleguide 2.1.2
 .grid:after,
 .u-clearfix:after {
   clear: both;
+}
+
+.u-rounded {
+  border-radius: 100%;
 }
 
 /*
@@ -1042,9 +1056,10 @@ Markup:
 
 Styleguide 3.1.1
 */
-h1, h2, h3,
-h4, h5, h6 {
-  font-family: "InterstateRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+.h1, .h2, .h3,
+.h4, .h5, .h6 {
+  font-family: "InterstateExtraLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.1;
   /**
    * Optimized kerning for large font sizes
    * use this only on large font-sizes (f.e. headings) to avoid performance issues.
@@ -1072,28 +1087,29 @@ Markup:
 
 Styleguide 3.1.2
 */
-h1, .h1 {
+.h1 {
   font-size: 50px;
 }
 
-h2, .h2 {
+.h2 {
   font-size: 40px;
 }
 
-h3, .h3 {
+.h3 {
   font-size: 30px;
 }
 
-h4, .h4 {
+.h4 {
   font-size: 24px;
 }
 
-h5, .h5 {
+.h5 {
   font-size: 20px;
 }
 
-h6, .h6 {
+.h6 {
   font-size: 16px;
+  margin-bottom: .75em;
 }
 
 /*
@@ -1121,8 +1137,8 @@ Styleguide 3.2.2
 */
 b,
 strong {
-  font-weight: 700;
-  /* Addresses style set to `bolder` in FF3+, S4/5, Chrome. */
+  font-weight: 400;
+  font-family: "InterstateRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -1426,7 +1442,7 @@ Styleguide 3.7.1
   margin-bottom: 0.75rem;
   background: white;
   border: 1px solid #cccccc;
-  border-radius: 1px;
+  border-radius: 3px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   font-size: 14px;
   font-size: 0.875rem;
@@ -1499,15 +1515,10 @@ Styleguide 3.8.1
   /**
    * Set in em's so we can change the size of the button depending on the font-size.
    */
-  padding: .5em .75em;
-  border: 0;
-  background: #5aca10;
-  border-radius: 1px;
+  padding: 1em 3em;
+  border: 2px solid #5aca10;
+  border-radius: 3px;
   cursor: pointer;
-  font-size: .8em;
-  /**
-   * Normalize some rules accross the targeted elements (<input>, <button> and the .btn class).
-   */
   font-weight: normal;
   line-height: 1;
   color: white;
@@ -1527,6 +1538,12 @@ Styleguide 3.8.1
   padding-right: 0;
   padding-left: 0;
   width: 100%;
+}
+
+.btn--solid {
+  border-color: #5aca10;
+  color: #FFF;
+  background: #5aca10;
 }
 
 /*
@@ -1859,6 +1876,38 @@ Styleguide 4.3.1
 }
 
 /*
+Grids
+
+Styleguide 4.1
+*/
+/*
+Grid Object
+
+Grid object which makes use of the generated width classes.
+
+Markup:
+<div class="g">
+	<div class="gi u-w1/3">first collumn</div>
+	<div class="gi u-w1/3">second collumn</div>
+	<div class="gi u-w1/3">third collumn</div>
+</div>
+
+Styleguide 4.1.1
+*/
+.g,
+.grid {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.gi,
+.grid__item {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*
 Navigations
 
 Styleguide 4.2
@@ -1901,36 +1950,66 @@ Styleguide 4.2.1
   display: table-cell;
 }
 
-/*
-Grids
-
-Styleguide 4.1
-*/
-/*
-Grid Object
-
-Grid object which makes use of the generated width classes.
-
-Markup:
-<div class="g">
-	<div class="gi u-w1/3">first collumn</div>
-	<div class="gi u-w1/3">second collumn</div>
-	<div class="gi u-w1/3">third collumn</div>
-</div>
-
-Styleguide 4.1.1
-*/
-.g,
-.grid {
-  margin-left: -10px;
-  margin-right: -10px;
+.stage {
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
 }
 
-.gi,
-.grid__item {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
+.stage--primary {
+  background: radial-gradient(ellipse at bottom, #c5fd73 0%, #5aca10 80%);
+}
+
+.stage--invert {
+  background: radial-gradient(ellipse at bottom, #6d7073 0%, #242425 80%);
+}
+
+.stage--shadowed:before, .stage--shadowed:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 50%);
+}
+.stage--shadowed:before {
+  top: -5px;
+}
+.stage--shadowed:after {
+  bottom: -5px;
+}
+
+.stage__background {
+  position: relative;
+  z-index: 0;
+}
+.stage__background,
+.stage__background > img {
+  width: 100%;
+}
+
+.stage__content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.stage__content--centered {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.stage__content--invert {
+  color: #FFF;
+}
+
+.stage__content--shadowed {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /*
@@ -1941,9 +2020,48 @@ Organisms are groups of molecules (and possibly atoms) joined together to form d
 /*
 Site Header
 */
+.siteHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  color: #FFF;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.33) 0%, transparent 100%);
+}
+
+.siteHeader__logo {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 30px 0;
+}
+
+.siteHeader__siteNav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: right;
+  font-size: 1.28571em;
+}
+.siteHeader__siteNav > li {
+  padding-left: 4%;
+}
+.siteHeader__siteNav > li > a {
+  color: currentColor;
+}
+
 /*
 Site Footer
 */
+.siteFooter {
+  padding: 1.5em 0;
+}
+
 /*
 Templates
 */

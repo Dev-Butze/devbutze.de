@@ -14,23 +14,24 @@ The following text <q>is an inline-quote</q>
 Styleguide 3.11.1
 */
 q {
-	/**
-	 * Sets consistent quote types.
-	 */
-	quotes: "\201C" "\201D" "\2018" "\2019";
+  /**
+   * Sets consistent quote types.
+   */
+  quotes: "\201C" "\201D" "\2018" "\2019";
 
-	@if $legacy-normalizecss {
-		&:before,
-		&:after {
-			/*
-			 * Addresses `quotes` property not supported in S4.
-			 */
-			content: '';
-			content: none;
-		}
-	}
+  @if $legacy-normalizecss {
+    &:before,
+    &:after {
+      /*
+       * Addresses `quotes` property not supported in S4.
+       */
+      content: '';
+      content: none;
+    }
+  }
 }
+
 blockquote {
-	@extend %u-m0;
-	@extend %u-mb;
+  @extend %u-m0;
+  @extend %u-mb;
 }

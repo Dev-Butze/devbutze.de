@@ -4,7 +4,6 @@ Mixins
 Styleguide 1.2
 */
 
-
 /*
 High density Image-Dimensions Mixin($fileName, $width, $height)
 
@@ -20,16 +19,15 @@ Markup:
 Styleguide 1.2.1
 */
 @mixin hdpi-img($fileName, $width, $height) {
-	@if(type-of($fileName) != "string") {
-		@warn 'Argument $fileName of hdpi-img() must be a string';
-	}
-	@if((type-of($width) != "number") or (type-of($height) != "number")) {
-		@warn 'Arguments $width and $height of hdpi-img() must be a number';
-	}
-	background-size: $width/2 $height/2;
-	background-image: image-url('#{$fileName}');
+  @if(type-of($fileName) != "string") {
+    @warn 'Argument $fileName of hdpi-img() must be a string';
+  }
+  @if((type-of($width) != "number") or (type-of($height) != "number")) {
+    @warn 'Arguments $width and $height of hdpi-img() must be a number';
+  }
+  background-size: $width/2 $height/2;
+  background-image: image-url('#{$fileName}');
 }
-
 
 /*
 REM Unit Mixin($property, $value)
@@ -46,10 +44,9 @@ Markup:
 Styleguide 1.2.2
 */
 @mixin rem($property: font-size, $value: 16) {
-	#{$property}: $value +px;
-	#{$property}: ($value / 16)*1rem;
+  #{$property}: $value +px;
+  #{$property}: ($value / 16)*1rem;
 }
-
 
 /*
 Font-Size Mixin($font-size, $appendVrythm)
@@ -66,12 +63,11 @@ Markup:
 Styleguide 1.2.3
 */
 @mixin font-size($font-size, $appendVrythm: false) {
-	@include rem(font-size, $font-size);
-	@if $appendVrythm {
-		line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-	}
+  @include rem(font-size, $font-size);
+  @if $appendVrythm {
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  }
 }
-
 
 /*
 CSS Triangle Mixin($triangleSize, $triangleColor, $triangleDirection)
@@ -92,16 +88,24 @@ Markup:
 Styleguide 1.2.4
 */
 @mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
-	@if(not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {
-		@warn 'Argument $triangleDirection  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
-	}
-	content: "";
-	display: block;
-	width: 0;
-	height: 0;
-	border: solid $triangleSize;
-	@if ($triangleDirection == "top")    { border-color: $triangleColor transparent transparent transparent; }
-	@if ($triangleDirection == "bottom") { border-color: transparent transparent $triangleColor transparent; }
-	@if ($triangleDirection == "left")   { border-color: transparent transparent transparent $triangleColor; }
-	@if ($triangleDirection == "right")  { border-color: transparent $triangleColor transparent transparent; }
+  @if(not ($triangleDirection == "top") and not ($triangleDirection == "bottom") and not ($triangleDirection == "left") and not ($triangleDirection == "right")) {
+    @warn 'Argument $triangleDirection  of cssTriangle() should be either "top", "bottom", "left" or "right" to work appropriately';
+  }
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid $triangleSize;
+  @if ($triangleDirection == "top")    {
+    border-color: $triangleColor transparent transparent transparent;
+  }
+  @if ($triangleDirection == "bottom") {
+    border-color: transparent transparent $triangleColor transparent;
+  }
+  @if ($triangleDirection == "left")   {
+    border-color: transparent transparent transparent $triangleColor;
+  }
+  @if ($triangleDirection == "right")  {
+    border-color: transparent $triangleColor transparent transparent;
+  }
 }

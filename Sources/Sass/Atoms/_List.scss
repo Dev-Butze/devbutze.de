@@ -6,7 +6,6 @@ Basic styling for lists and definition elements.
 Styleguide 3.5
 */
 
-
 /*
 Unordered- & Ordered-Lists
 
@@ -33,16 +32,17 @@ Styleguide 3.5.1
 menu,
 ol,
 ul {
-	padding: 0 0 0 rs(40);
-	@extend %u-m0;
-	@extend %u-mb;
+  padding: 0 0 0 rs(40);
+  @extend %u-m0;
+  @extend %u-mb;
 }
+
 li > ul,
 li > ol {
-	/**
-	 * Remove vertical spacing from nested lists.
-	 */
-	margin-bottom: 0;
+  /**
+   * Remove vertical spacing from nested lists.
+   */
+  margin-bottom: 0;
 }
 
 /*
@@ -50,12 +50,12 @@ Reset-List helper class
 */
 %reset-list,
 .reset-list {
-	/**
-	 *
-	 */
-	list-style: none;
-	margin-bottom: 0;
-	padding-left: 0;
+  /**
+   *
+   */
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 /*
@@ -79,16 +79,17 @@ Markup:
 Styleguide 3.5.3
 */
 dl {
-	@extend %u-m0;
-	@extend %u-mb;
+  @extend %u-m0;
+  @extend %u-mb;
 }
+
 dd {
-	@if $legacy-normalizecss {
-		/**
-		 * Addresses margins set differently in IE6/7.
-		 */
-		margin: 0 0 0 rs(40);
-	}
+  @if $legacy-normalizecss {
+    /**
+     * Addresses margins set differently in IE6/7.
+     */
+    margin: 0 0 0 rs(40);
+  }
 }
 
 /*
@@ -96,16 +97,16 @@ Horizontal definition abstraction
 */
 %dl--horizontal,
 .dl--horizontal {
-	@extend .u-cf;
-	dt {
-		float: $start;
-		width: 19%;
-		overflow: hidden;
-		clear: $start;
-		text-align: $end;
-		@extend %u-textBreak;
-	}
-	dd {
-		margin-#{$start}: 21%;
-	}
+  @extend .u-cf;
+  dt {
+    float: $start;
+    width: 19%;
+    overflow: hidden;
+    clear: $start;
+    text-align: $end;
+    @extend %u-textBreak;
+  }
+  dd {
+    margin-#{$start}: 21%;
+  }
 }

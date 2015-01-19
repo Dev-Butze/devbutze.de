@@ -44,51 +44,71 @@ Markup:
 Styleguide 3.9.1
 */
 table {
-	max-width: 100%;
-	border-collapse: collapse;
-	border-spacing: 0;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
 th {
-	text-align: $start;
-	vertical-align: bottom;
+  text-align: $start;
+  vertical-align: bottom;
 }
-td { vertical-align: top; }
+
+td {
+  vertical-align: top;
+}
 
 %table,
 .table {
-	width: 100%;
-	margin-top: 0;
-	@extend %u-mb;
-	td, th { padding: 0.5em; }
+  width: 100%;
+  margin-top: 0;
+  @extend %u-mb;
+  td, th {
+    padding: 0.5em;
+  }
 }
 
 %table--bordered,
 .table--bordered {
-	border: 1px solid color-adjust($content-background, 20%);
-	border-collapse: separate;
-	td, th {
-		border-left: 1px solid color-adjust($content-background, 20%);
-		border-bottom: 1px solid color-adjust($content-background, 20%);
-		&:first-child { border-left: 0; }
-	}
-	tr:last-child > td { border-bottom: 0; }
+  border: 1px solid color-adjust($content-background, 20%);
+  border-collapse: separate;
+  td, th {
+    border-left: 1px solid color-adjust($content-background, 20%);
+    border-bottom: 1px solid color-adjust($content-background, 20%);
+    &:first-child {
+      border-left: 0;
+    }
+  }
+  tr:last-child > td {
+    border-bottom: 0;
+  }
 }
 
 %table--striped,
 .table--striped {
-	td, th { border-bottom: 1px solid color-adjust($content-background, 20%); }
-	th { padding-top: 0; }
+  td, th {
+    border-bottom: 1px solid color-adjust($content-background, 20%);
+  }
+  th {
+    padding-top: 0;
+  }
 }
 
 %table--condensed,
 .table--condensed {
-	td, th { padding: 0.25em 0.5em 0.25em; }
+  td, th {
+    padding: 0.25em 0.5em 0.25em;
+  }
 }
 
 %table--zebra,
 .table--zebra {
-	tbody {
-		tr:nth-child(even) { background: $content-background; }
-		tr:nth-child(odd) { background: color-adjust($content-background, 5%); }
-	}
+  tbody {
+    tr:nth-child(even) {
+      background: $content-background;
+    }
+    tr:nth-child(odd) {
+      background: color-adjust($content-background, 5%);
+    }
+  }
 }

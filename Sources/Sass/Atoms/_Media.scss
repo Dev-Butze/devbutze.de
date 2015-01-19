@@ -4,7 +4,6 @@ Media
 Basic styling for media elements.
 */
 
-
 /*
 Attachements & Images
 
@@ -21,63 +20,71 @@ Contents: 1: Make Images & Attachements responsive
 embed,
 iframe,
 object,
-img { /* 1 */
-	max-width: 100%;
-}
 img {
-	font-style: italic; /* 2 */
-	border: 0; /* 3 */
-	vertical-align: middle; /* 4 */
-	@if $legacy-normalizecss {
-		-ms-interpolation-mode: bicubic; /* 5 */
-	}
-	&[height] { /* 1 */
-		height: auto;
-	}
+  /* 1 */
+  max-width: 100%;
 }
+
+img {
+  font-style: italic; /* 2 */
+  border: 0; /* 3 */
+  vertical-align: middle; /* 4 */
+  @if $legacy-normalizecss {
+    -ms-interpolation-mode: bicubic; /* 5 */
+  }
+  &[height] {
+    /* 1 */
+    height: auto;
+  }
+}
+
 figure {
-	/**
-	 * Addresses margin not present in IE6/7/8/9, S5, O11.
-	 */
-	margin: 1em 40px;
+  /**
+   * Addresses margin not present in IE6/7/8/9, S5, O11.
+   */
+  margin: 1em 40px;
 }
-figcaption { /* 6 */
-	@include font-size(($base-font-size - 2));
+
+figcaption {
+  /* 6 */
+  @include font-size(($base-font-size - 2));
 }
+
 iframe {
-	@extend %u-mb;
+  @extend %u-mb;
 }
 
 /*
 Multimedia elements
 */
 video {
-	@extend %u-mb;
+  @extend %u-mb;
 }
-audio {
-	@extend %u-mb;
-	min-width: 65%;
 
-	&:not([controls]) {
-		/**
-		 * Prevents modern browsers from displaying `audio` without controls.
-		 */
-		display: none;
-		/**
-		 * Remove excess height in iOS5 devices.
-		 */
-		height: 0;
-	}
+audio {
+  @extend %u-mb;
+  min-width: 65%;
+
+  &:not([controls]) {
+    /**
+     * Prevents modern browsers from displaying `audio` without controls.
+     */
+    display: none;
+    /**
+     * Remove excess height in iOS5 devices.
+     */
+    height: 0;
+  }
 }
 
 /*
 SVG element
 */
 svg {
-	&:not(:root) {
-		/**
-		 * Corrects overflow displayed oddly in IE9.
-		 */
-		overflow: hidden;
-	}
+  &:not(:root) {
+    /**
+     * Corrects overflow displayed oddly in IE9.
+     */
+    overflow: hidden;
+  }
 }

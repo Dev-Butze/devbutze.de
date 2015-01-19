@@ -25,23 +25,27 @@ Styleguide 4.2.1
 */
 %nav,
 .nav {
-	@extend %reset-list;
-	li { display: inline-block; }
-	a { display: block; }
+  @extend %reset-list;
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+  }
 }
 
 %nav--stacked,
 .nav--stacked {
-	li {
-		display: list-item;
-	}
+  li {
+    display: list-item;
+  }
 }
 
 %nav--fit,
 .nav--fit {
-	display: table;
-	width: 100%;
-	> li {
-		display: table-cell;
-	}
+  display: table;
+  width: 100%;
+  > li {
+    display: table-cell;
+  }
 }

@@ -6,12 +6,11 @@
 // @link http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
 //
 
-
 // =============================================================================
 // Project settings
 // =============================================================================
 // Set the box-sizing of all elements to 'border-box'.
-$global-border-box:     true;
+$global-border-box: true;
 
 // Browser support for 'false':
 // Google Chrome
@@ -19,12 +18,11 @@ $global-border-box:     true;
 // Apple Safari 5+
 // Opera 12+
 // Internet Explorer 8+
-$legacy-normalizecss:   false;
+$legacy-normalizecss: false;
 
 // Reading direction of this project, if set to 'rtl' texts, labels
 // and the grid will be aligned to the right side of the document.
-$direction:             ltr;
-
+$direction: ltr;
 
 // =============================================================================
 // Brand related variables
@@ -35,16 +33,18 @@ $brand-colors: (
 	primary: #5aca10,
 	secondary: #c5fd73,
 	tertiary: #4e5466,
-	quaternary: #29334c
+	quaternary: #29334c,
+	quinary: #6d7073,
+	senary: #242425
 );
 
 // Your main brand Font-Family
-$brand-font-family:     "InterstateLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$interstateRegular:     "InterstateRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$brand-font-family: "InterstateExtraLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$interstateRegular: "InterstateRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  // If your layout makes use of rounded corners, you can specify an Border-Radius
+// If your layout makes use of rounded corners, you can specify an Border-Radius
 // here to have a consistent setting.
-$brand-border-radius:   1px;
+$brand-border-radius: 3px;
 
 // The brands main logo file.
 $brand-logo: (
@@ -53,56 +53,55 @@ $brand-logo: (
   height: 26px
 );
 
-
 // =============================================================================
 // Base Typesetting
 // =============================================================================
 // Font-family stack variables to standardize the font-setting
-$sans-font-family:      $brand-font-family;
-$serif-font-family:     Georgia, "Times New Roman", Times, serif;
-$mono-font-family:      Menlo, Monaco, Consolas, "Courier New", monospace; // Will be set on elements like <code> etc.
+$sans-font-family: $brand-font-family;
+$serif-font-family: Georgia, "Times New Roman", Times, serif;
+$mono-font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+// Will be set on elements like <code> etc.
 
 // The font-weights below are used to handle webfonts and consistent stylings.
-$bold:                  700;
-$regular:               400;
-$light:                 300;
+$bold: 700;
+$regular: 400;
+$light: 300;
 
 // Base font settings which will be set on the '<body>' element,
 // '$base-font-size' and '$base-line-height' are pixel values.
-$base-font-size:        14;
-$base-line-height:      24;
-$base-font-family:      $sans-font-family;
-$base-font-weight:      $regular;
-$base-text-color:       map-get($brand-colors, tertiary);
+$base-font-size: 14;
+$base-line-height: 24;
+$base-font-family: $sans-font-family;
+$base-font-weight: $regular;
+$base-text-color: map-get($brand-colors, tertiary);
 
 // Typographic spacings (in pixels), these default values will
 // output a basic vertical rythm based on your '$base-line-height'.
-$basic-spacing:         $base-line-height;
-$half-spacing:          $basic-spacing / 2;
-
+$basic-spacing: $base-line-height;
+$half-spacing: $basic-spacing / 2;
 
 // =============================================================================
 // Layout
 // =============================================================================
 // Basic layout width (in pixels) - will be set on the '.siteWrapper' class
 // The value is wrapped in the relative-size function which converts pixels into em's.
-$layout-width:          rs(960);
+$layout-width: 90%;
 
 // Is this layout centered? If set to 'true' the '.wrapper' class will be centered.
-$centered-layout:       true;
+$centered-layout: true;
 
 // Inner spacing for all grid-items.
-$column-gutter:         20px;
+$column-gutter: 20px;
 
 // The background which will be set on the <body> element, you can also pass in
 // other arguments e.g.:
 // $body-background: image-url('body-bg.gif') top left repeat-x #fff;
-$body-background:       #fff;
+$body-background: #fff;
 
 // Used to generate some colors, this doesn't have any direct effect on
 // the .site-content container or its background.
-$content-background:    #fff;
+$content-background: #fff;
 
 // default units for media-query mixins - it must include a digit e.g.:
 // $mq-unit: 1em; or $mq-unit: 1px;
-$mq-unit:               1px;
+$mq-unit: 1px;

@@ -23,41 +23,40 @@ Styleguide 3.8.1
 */
 %btn,
 .btn {
-	display: inline-block;
-	@include rem(margin-bottom, $half-spacing);
-	/**
-	 * Set in em's so we can change the size of the button depending on the font-size.
-	 */
-	padding: .5em .75em;
-	border: 0;
+  display: inline-block;
+  @include rem(margin-bottom, $half-spacing);
+  /**
+   * Set in em's so we can change the size of the button depending on the font-size.
+   */
+  padding: 1em 3em;
+  border: 2px solid map-get($brand-colors, primary);
+  border-radius: $brand-border-radius;
+  cursor: pointer;
+  font-weight: normal;
+  line-height: 1;
+  color: white;
+  vertical-align: top;
 
-	background: map-get($brand-colors, primary);
-	border-radius: $brand-border-radius;
-	cursor: pointer;
-
-	font-size: .8em;
-	/**
-	 * Normalize some rules accross the targeted elements (<input>, <button> and the .btn class).
-	 */
-	font-weight: normal;
-	line-height: 1;
-	color: color-adjust(map-get($brand-colors, primary), 100%);
-	vertical-align: top;
-
-	&,
-	&:hover {
-		text-decoration: none;
-	}
+  &,
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 %btn--full,
 .btn--full {
-	display: block;
-	text-align: center;
-	/**
-	 * The following is so that this class works properly on inputs as well as anchor tags.
-	 */
-	padding-right: 0;
-	padding-left: 0;
-	width: 100%;
+  display: block;
+  text-align: center;
+  /**
+   * The following is so that this class works properly on inputs as well as anchor tags.
+   */
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+
+.btn--solid {
+  border-color: map-get($brand-colors, primary);
+  color: #FFF;
+  background: map-get($brand-colors, primary);
 }

@@ -1,4 +1,35 @@
 /*
 Site Header
 */
-.siteHeader { }
+.siteHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  color: #FFF;
+  background: linear-gradient(to bottom, rgba(#000, 0.33) 0%, rgba(#000, 0) 100%);
+}
+
+.siteHeader__logo {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 30px 0;
+}
+
+.siteHeader__siteNav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: right;
+  font-size: rs(18);
+  > li {
+    padding-left: 4%;
+    > a {
+      color: currentColor;
+    }
+  }
+}
