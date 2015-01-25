@@ -1,0 +1,29 @@
+@mixin svgPaint($color: $base-text-color) {
+  path,
+  polygon,
+  rect {
+    fill: $color;
+  }
+  circle {
+    stroke: $color;
+    stroke-width: 1;
+  }
+}
+
+.i {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: top;
+  @include svgPaint();
+}
+.i--large {
+  width: 3em;
+  height: 3em;
+}
+.i--tiny {
+  width: 1em;
+  height: 1em;
+}
+.i--invert {
+  @include svgPaint(#FFF);
+}

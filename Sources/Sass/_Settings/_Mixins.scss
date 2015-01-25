@@ -109,3 +109,19 @@ Styleguide 1.2.4
     border-color: transparent $triangleColor transparent transparent;
   }
 }
+
+// Animations
+@keyframes aniDown {
+  0%   {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin aniDown($duration: .2s, $delay: 0s) {
+  animation: aniDown $duration $delay both;
+}

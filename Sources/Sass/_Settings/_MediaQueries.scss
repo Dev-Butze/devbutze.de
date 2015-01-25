@@ -54,3 +54,27 @@ Styleguide 1.2.6
     @content;
   }
 }
+
+// =============================================================================
+// Shorthands
+// =============================================================================
+@mixin mq-tiny() {
+  @include max-screen($mq-tiny - 1) {
+    @content;
+  }
+}
+@mixin mq-maxMedium() {
+  @include max-screen($mq-large - 1) {
+    @content;
+  }
+}
+@mixin mq-medium() {
+  @include min-screen($mq-medium) {
+    @content;
+  }
+}
+@mixin mq-large() {
+  @include min-screen($mq-large) {
+    @content;
+  }
+}

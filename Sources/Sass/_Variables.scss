@@ -105,3 +105,12 @@ $content-background: #fff;
 // default units for media-query mixins - it must include a digit e.g.:
 // $mq-unit: 1em; or $mq-unit: 1px;
 $mq-unit: 1px;
+
+
+// =============================================================================
+// MQ Breakpoints
+// =============================================================================
+$mq-tiniest: 350;
+$mq-tiny: 480;
+$mq-medium: 700;
+$mq-large: 1000;

@@ -221,3 +221,6 @@ Markup:
 Styleguide 2.6
 */
 @include grid-setup();
+@include mq-medium() {
+  @include grid-setup('m');
+}

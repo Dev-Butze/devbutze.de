@@ -55,5 +55,8 @@
   },
   "napa": {
     "modernizr": "Modernizr/Modernizr#v2.8.3"
+  },
+  "browser": {
+      "componentPrototype": "./Sources/JavaScript/Utilities/ComponentPrototype/Util.js"
   }
 }

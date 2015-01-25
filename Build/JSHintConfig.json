@@ -23,6 +23,7 @@
 	"globals": {
 		// Modernizr
 		"Modernizr": true,
+        "$": true,
 
 		// RequireJS
 		"module": true,
