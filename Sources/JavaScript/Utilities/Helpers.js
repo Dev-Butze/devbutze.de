@@ -76,6 +76,15 @@ var helpers = {
         currentTime--;
 
         return -changedValue / 2 * (currentTime * (currentTime - 2) - 1) + startValue;
+    },
+    setTransform: function(element, prop) {
+        'use strict';
+
+        element.style.webkitTransform = prop;
+        element.style.MozTransform = prop;
+        element.style.msTransform = prop;
+        element.style.OTransform = prop;
+        element.style.transform = prop;
     }
 };
 

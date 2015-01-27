@@ -44,13 +44,15 @@
             </div>
 		</header>
 		<main class="siteContent" role="main">
-			<section class="stage" id="start">
+			<section class="stage" id="start" data-component="parallaxStage" data-target="[data-parallax]">
                 <div class="stage__background">
-                    <img src="Images/Keyvisual_welcome.jpg">
+                    <img src="Images/Keyvisual_welcome.jpg" data-parallax>
                 </div>
                 <div class="stage__content stage__content--centered stage__content--invert stage__content--shadowed">
-                    <h1 class="h1 stage__content__headingCopy"><b>Willkommen.</b><br>
-                    <span class="stage__content__headingCopy__sub">Auf devButze.de - Dem IT-Dientleister für Agenturen.</span></h1>
+                    <h1 class="h1 stage__content__headingCopy" data-parallax data-parallaxFactor="0.85">
+                        <b>Willkommen.</b><br>
+                        <span class="stage__content__headingCopy__sub">Auf devButze.de - Dem IT-Dientleister für Agenturen.</span>
+                    </h1>
                 </div>
 			</section>
             <section class="stage" id="about">
@@ -67,19 +69,19 @@
                     <h1 class="h1">Wer wir sind</h1>
                     <div class="siteWrapper">
                         <div class="g">
-                            <div class="gi u-w1/1 u-wm1/3">
+                            <div class="gi u-w1/1 u-wm1/3 u-mb">
                                 <img src="Images/Avatar_1.jpg" alt="" class="u-rounded u-mb" />
                                 <h3 class="h6">Christoph</h3>
                                 <p>Backend-Entwickler<br>
                                     Karlsruhe/Deutschland</p>
                             </div>
-                            <div class="gi u-w1/1 u-wm1/3">
+                            <div class="gi u-w1/1 u-wm1/3 u-mb">
                                 <img src="Images/Avatar_2.jpg" alt="" class="u-rounded u-mb" />
                                 <h3 class="h6">Christoph</h3>
                                 <p>Backend-Entwickler<br>
                                     Karlsruhe/Deutschland</p>
                             </div>
-                            <div class="gi u-w1/1 u-wm1/3">
+                            <div class="gi u-w1/1 u-wm1/3 u-mb">
                                 <img src="Images/Avatar_3.jpg" alt="" class="u-rounded u-mb" />
                                 <h3 class="h6">Christoph</h3>
                                 <p>Backend-Entwickler<br>
@@ -93,18 +95,18 @@
                 <div class="stage__content u-alignCenter">
                     <h1 class="h1">Wir arbeiten mit</h1>
 
-                    <div class="g u-mb">
-                        <div class="gi u-w1/1 u-wm1/3">
+                    <div class="g">
+                        <div class="gi u-w1/1 u-wm1/3 u-mb">
                             <img src="Images/typo3CmsLogo.png" class="u-grayScaled u-mb" alt="TYPO3 CMS"/>
                             <p>TYPO3 Neos is the next-generation open source content management system made by the TYPO3 community. Neos is based on TYPO3 Flow.</p>
                             <a class="btn" href="http://typo3.org/typo3-cms/" target="_blank">Mehr erfahren</a>
                         </div>
-                        <div class="gi u-w1/1 u-wm1/3">
+                        <div class="gi u-w1/1 u-wm1/3 u-mb">
                             <img src="Images/typo3FlowLogo.png" class="u-grayScaled u-mb" alt="TYPO3 Flow"/>
                             <p>TYPO3 Neos is the next-generation open source content management system made by the TYPO3 community. Neos is based on TYPO3 Flow.</p>
                             <a class="btn" href="http://typo3.org/typo3-flow/" target="_blank">Mehr erfahren</a>
                         </div>
-                        <div class="gi u-w1/1 u-wm1/3">
+                        <div class="gi u-w1/1 u-wm1/3 u-mb">
                             <img src="Images/typo3NeosLogo.png" class="u-grayScaled u-mb" alt="TYPO3 Neos"/>
                             <p>TYPO3 Neos is the next-generation open source content management system made by the TYPO3 community. Neos is based on TYPO3 Flow.</p>
                             <a class="btn" href="http://typo3.org/typo3-neos/overview/" target="_blank">Mehr erfahren</a>
