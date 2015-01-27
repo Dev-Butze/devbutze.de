@@ -9,8 +9,9 @@ Button Object
 Display an anchor tag as a button.
 
 .btn           - Display an element as an button.
-.btn.btn--full - Set the button width to the width of it's parent element.
 .btn:hover     - Standard hover styling for buttons.
+.btn.btn--full - Set the button width to the width of it's parent element.
+.btn.btn--solid - A solid background modifier.
 
 Markup:
 <button class="{$modifiers}">Send button</button>
@@ -29,17 +30,24 @@ Styleguide 3.8.1
    * Set in em's so we can change the size of the button depending on the font-size.
    */
   padding: 1em 3em;
-  border: 2px solid map-get($brand-colors, primary);
+  border: 2px solid currentColor;
   border-radius: $brand-border-radius;
   cursor: pointer;
+  font-family: $interstateRegular;
   font-weight: normal;
   line-height: 1;
-  color: white;
+  color: map-get($brand-colors, primary);
   vertical-align: top;
+  transition: all .3s ease;
 
   &,
   &:hover {
     text-decoration: none;
+  }
+  &:hover {
+    border-color: map-get($brand-colors, primary);
+    background: map-get($brand-colors, primary);
+    color: #FFF;
   }
 }
 

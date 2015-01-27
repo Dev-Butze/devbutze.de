@@ -64,6 +64,18 @@ var helpers = {
 
         // Return the modified object
         return target;
+    },
+    easeInOutQuad: function(currentTime, startValue, changedValue, duration) {
+        'use strict';
+
+        currentTime /= duration / 2;
+        if (currentTime < 1) {
+            return changedValue / 2 * currentTime * currentTime + startValue;
+        }
+
+        currentTime--;
+
+        return -changedValue / 2 * (currentTime * (currentTime - 2) - 1) + startValue;
     }
 };
 

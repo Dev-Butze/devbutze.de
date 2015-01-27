@@ -12,6 +12,7 @@ Site Header
   background: linear-gradient(to bottom, rgba(#000, 0.33) 0%, rgba(#000, 0) 100%);
 }
 
+// Site brandLogo
 .siteHeader__logo {
   position: relative;
   z-index: 1;
@@ -19,6 +20,7 @@ Site Header
   padding: 30px 0;
 }
 
+// Site SiteNav mode toggler
 .siteHeader__siteNavToggler {
   position: absolute;
   right: 0;
@@ -55,7 +57,7 @@ Site Header
   }
 }
 
-
+// SiteNav base styles.
 .siteHeader__siteNav {
   display: none;
   position: absolute;
@@ -88,6 +90,7 @@ Site Header
     text-align: center;
     font-size: 2em;
     background: rgba(#000, 0.9);
+
     > li {
       display: block;
       @include aniDown($duration: .2s, $delay: 0s);

@@ -1,5 +1,5 @@
 /*!
-* Stylesheets for http://devbutze.de/ - Built on: 2015-01-25 
+* Stylesheets for http://devbutze.de/ - Built on: 2015-01-27 
 * 
 * @package devButze
 * @author Tyll Weiß <inkdpixels@gmail.com>
@@ -179,6 +179,44 @@ Styleguide 1.2.4
   }
 
   100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes aniFadeIn {
+  0% {
+    display: none;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes aniFadeIn {
+  0% {
+    display: none;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+
+  100% {
+    display: block;
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -622,8 +660,41 @@ Styleguide 2.1.2
   clear: both;
 }
 
+/*
+Rounded utility
+
+Set's a block elements shape to a 100% ellipse.
+
+Markup:
+<div class="u-rounded" style="height: 40px; width: 40px; background: #000;"></div>
+
+Styleguide 2.1.3
+*/
 .u-rounded {
   border-radius: 100%;
+}
+
+/*
+GrayScaled image
+
+Uses new CSS filters to grayscale an element, and reveal it's initial colors on :hover.
+
+Markup:
+<div class="u-grayScaled" style="height: 40px; width: 40px; background: red;"></div>
+
+Styleguide 2.1.3
+*/
+.u-grayScaled {
+  display: inline-block;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: .5;
+  transition: all .3s ease;
+}
+.u-grayScaled:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
 }
 
 /*
@@ -1238,7 +1309,12 @@ Markup:
 Styleguide 3.1.2
 */
 .h1 {
-  font-size: 3.57143em;
+  font-size: 2.85714em;
+}
+@media screen and (min-width: 700px) {
+  .h1 {
+    font-size: 3.57143em;
+  }
 }
 
 .h2 {
@@ -1681,8 +1757,9 @@ Button Object
 Display an anchor tag as a button.
 
 .btn           - Display an element as an button.
-.btn.btn--full - Set the button width to the width of it's parent element.
 .btn:hover     - Standard hover styling for buttons.
+.btn.btn--full - Set the button width to the width of it's parent element.
+.btn.btn--solid - A solid background modifier.
 
 Markup:
 <button class="{$modifiers}">Send button</button>
@@ -1701,17 +1778,24 @@ Styleguide 3.8.1
    * Set in em's so we can change the size of the button depending on the font-size.
    */
   padding: 1em 3em;
-  border: 2px solid #5aca10;
+  border: 2px solid currentColor;
   border-radius: 3px;
   cursor: pointer;
+  font-family: "InterstateRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1;
-  color: white;
+  color: #5aca10;
   vertical-align: top;
+  transition: all .3s ease;
 }
 .btn,
 .btn:hover {
   text-decoration: none;
+}
+.btn:hover {
+  border-color: #5aca10;
+  background: #5aca10;
+  color: #FFF;
 }
 
 .btn--full {
@@ -2135,13 +2219,36 @@ Styleguide 4.2.1
   display: table-cell;
 }
 
+/*
+Stage
+
+Styleguide 4.3
+*/
+/*
+The Stage Object
+
+A major contentWrapper element with different layouts/colorsets.
+
+.stage - Base styles for the stage wrapper.
+.stage.stage--primary - Green colorset for the stage wrapper.
+.stage.stage--invert - Black colorset for the stage wrapper.
+.stage.stage--shadowed - Adds a top and bottom inner shadow to the stage wrapper.
+
+Markup:
+<section class="{$modifiers}">
+    <div class="stage__background">
+        <img src="Images/Keyvisual_contact.jpg">
+    </div>
+    <div class="stage__content stage__content--centered stage__content--invert">
+        <h1 class="h1">Content</h1>
+    </div>
+</section>
+
+Styleguide 4.3.1
+*/
 .stage {
   position: relative;
   overflow: hidden;
-}
-
-.stage--autoAspectRatio {
-  min-height: 0;
 }
 
 .stage--primary {
@@ -2206,10 +2313,13 @@ Styleguide 4.2.1
 
 .stage__content__headingCopy {
   font-size: 7vw;
+  margin-bottom: 0;
+  margin-top: 2em;
 }
 @media screen and (min-width: 700px) {
   .stage__content__headingCopy {
     font-size: 5vw;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 1000px) {

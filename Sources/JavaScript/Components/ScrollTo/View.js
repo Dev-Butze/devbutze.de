@@ -1,23 +1,20 @@
 var componentPrototype = require('componentPrototype'),
+    easeInOutQuad = require('./../../Utilities/Helpers').easeInOutQuad,
     ScrollTo;
 
-
-//t = current time
-//b = start value
-//c = change in value
-//d = duration
-var easeInOutQuad = function (t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) {
-        return c / 2 * t * t + b;
-    }
-
-    t--;
-
-    return -c / 2 * (t * (t - 2) - 1) + b;
-};
-
+/**
+ * ScrollTo
+ * @description Scrolls to a certain target element on the elements click.
+ * @constructor
+ */
 ScrollTo = componentPrototype.extend({
+    /**
+     * initialize
+     * @description Initializes the module.
+     * @param el {HTMLElement} The Element on which the event listener will be mounted.
+     * @param dataset {Object} The configuration objectfor the Component.
+     * @returns {ScrollTo}
+     */
     initialize: function(el, dataset) {
         'use strict';
 
@@ -34,6 +31,12 @@ ScrollTo = componentPrototype.extend({
 
         return this;
     },
+
+    /**
+     * scrollToTarget
+     * @description Scrolls to the target.
+     * @returns {ScrollTo}
+     */
     scrollToTarget: function() {
         'use strict';
 

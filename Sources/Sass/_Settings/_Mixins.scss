@@ -112,7 +112,7 @@ Styleguide 1.2.4
 
 // Animations
 @keyframes aniDown {
-  0%   {
+  0% {
     opacity: 0;
     transform: translateY(-30px);
   }
@@ -121,7 +121,25 @@ Styleguide 1.2.4
     transform: translateY(0);
   }
 }
+@keyframes aniFadeIn {
+  0% {
+    display: none;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @mixin aniDown($duration: .2s, $delay: 0s) {
   animation: aniDown $duration $delay both;
+}
+@mixin aniFadeIn($duration: .2s, $delay: 0s) {
+  animation: aniFadeIn $duration $delay both;
 }

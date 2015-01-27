@@ -48,6 +48,40 @@ Styleguide 2.1.2
   }
 }
 
+/*
+Rounded utility
+
+Set's a block elements shape to a 100% ellipse.
+
+Markup:
+<div class="u-rounded" style="height: 40px; width: 40px; background: #000;"></div>
+
+Styleguide 2.1.3
+*/
+%u-rounded,
 .u-rounded {
   border-radius: 100%;
+}
+
+/*
+GrayScaled image
+
+Uses new CSS filters to grayscale an element, and reveal it's initial colors on :hover.
+
+Markup:
+<div class="u-grayScaled" style="height: 40px; width: 40px; background: red;"></div>
+
+Styleguide 2.1.3
+*/
+%u-grayScaled,
+.u-grayScaled {
+  display: inline-block;
+  filter: grayscale(1);
+  opacity: .5;
+  transition: all .3s ease;
+
+  &:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
 }
