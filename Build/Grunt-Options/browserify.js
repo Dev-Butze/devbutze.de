@@ -17,7 +17,6 @@ vendorFile[config.JavaScripts.paths.distDir + '/Vendor.min.js'] = ['Vendor.js'];
 
 module.exports = {
 	options: {
-		external: externals,
 		bundleOptions: {
 			debug: true // Create a sourcemap.
 		}
@@ -30,14 +29,6 @@ module.exports = {
 			transform: ['stripify'] // Strip console.logs and uglify the build on deploy.
 		},
 		files: files
-	},
-	vendor: {
-		options: {
-			debug: false,
-			external: null,
-			require: externals
-		},
-		files: vendorFile
 	},
 	head: {
 		files: headFiles

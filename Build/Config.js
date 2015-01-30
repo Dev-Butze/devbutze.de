@@ -72,8 +72,7 @@ var Config = function() {
 		paths: {
 			devDir: this.paths.private + '/JavaScript',
 			distDir: this.paths.public + '/JavaScript'
-		},
-		externals: []
+		}
 	};
 
 

@@ -14,7 +14,6 @@ module.exports = function(grunt) {
 		// Compile the projects javsscript via browserify.
 		grunt.task.run('browserify:' + mode);
 		grunt.task.run('browserify:head');
-		grunt.task.run('browserify:vendor');
 	});
 };
 
