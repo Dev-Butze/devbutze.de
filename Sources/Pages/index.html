@@ -45,9 +45,11 @@
 		</header>
 		<main class="siteContent" role="main">
 			<section class="stage" id="start" data-component="parallaxStage" data-target="[data-parallax]">
-                <div class="stage__background">
-                    <img src="Images/Keyvisual_welcome.jpg" data-parallax>
-                </div>
+                <picture class="stage__background" data-parallax>
+                    <source srcset="Images/Responsive/Keyvisuals/Keyvisual_welcome-2-large.jpg" media="(min-width: 1000px)">
+                    <source srcset="Images/Responsive/Keyvisuals/Keyvisual_welcome-2-medium.jpg" media="(min-width: 600px)">
+                    <img srcset="Images/Responsive/Keyvisuals/Keyvisual_welcome-2-320.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+                </picture>
                 <div class="stage__content stage__content--centered stage__content--invert stage__content--shadowed">
                     <h1 class="h1 stage__content__headingCopy" data-parallax data-parallaxFactor="0.85">
                         <b>Willkommen.</b><br>
@@ -96,17 +98,17 @@
                     <h1 class="h1">Wir arbeiten mit</h1>
 
                     <div class="g">
-                        <div class="gi u-w1/1 u-wm1/3 u-mb">
+                        <div class="gi u-w1/1 u-wm1/3 u-mb u-mt0-5">
                             <img src="Images/typo3CmsLogo.png" class="u-grayScaled u-mb" alt="TYPO3 CMS"/>
                             <p>TYPO3 Neos is the next-generation open source content management system made by the TYPO3 community. Neos is based on TYPO3 Flow.</p>
                             <a class="btn" href="http://typo3.org/typo3-cms/" target="_blank">Mehr erfahren</a>
                         </div>
-                        <div class="gi u-w1/1 u-wm1/3 u-mb">
+                        <div class="gi u-w1/1 u-wm1/3 u-mb u-mt0-5">
                             <img src="Images/typo3FlowLogo.png" class="u-grayScaled u-mb" alt="TYPO3 Flow"/>
                             <p>TYPO3 Neos is the next-generation open source content management system made by the TYPO3 community. Neos is based on TYPO3 Flow.</p>
                             <a class="btn" href="http://typo3.org/typo3-flow/" target="_blank">Mehr erfahren</a>
                         </div>
-                        <div class="gi u-w1/1 u-wm1/3 u-mb">
+                        <div class="gi u-w1/1 u-wm1/3 u-mb u-mt0-5">
                             <img src="Images/typo3NeosLogo.png" class="u-grayScaled u-mb" alt="TYPO3 Neos"/>
                             <p>TYPO3 Neos is the next-generation open source content management system made by the TYPO3 community. Neos is based on TYPO3 Flow.</p>
                             <a class="btn" href="http://typo3.org/typo3-neos/overview/" target="_blank">Mehr erfahren</a>
@@ -120,11 +122,13 @@
                 </div>
             </section>
             <section class="stage" id="contact">
-                <div class="stage__background">
-                    <img src="Images/Keyvisual_contact.jpg" style="min-height: 30vh;">
-                </div>
+                <picture class="stage__background">
+                    <source srcset="Images/Responsive/Keyvisuals/Keyvisual_contact-large.jpg" media="(min-width: 1000px)">
+                    <source srcset="Images/Responsive/Keyvisuals/Keyvisual_contact-medium.jpg" media="(min-width: 600px)">
+                    <img srcset="Images/Responsive/Keyvisuals/Keyvisual_contact-320.jpg" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+                </picture>
                 <div class="stage__content stage__content--centered stage__content--invert">
-                    <h1 class="h1">Kontakt</h1>
+                    <h1 class="h1 u-mb0-5">Kontakt</h1>
                     <p>Wenn wir dich in deiner Firma oder Agentur unterstützen können, melde dich bei uns:</p>
                     <a class="btn btn--solid" href="mailto:hallo@devbutze.de">hallo@devbutze.de</a>
                 </div>

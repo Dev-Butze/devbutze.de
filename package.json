@@ -33,6 +33,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-karma": "^0.8.3",
     "grunt-modernizr": "~0.5.1",
+    "grunt-responsive-images": "^0.1.5",
     "grunt-webfontjson": "0.0.4",
     "jit-grunt": "~0.7.0",
     "jshint-stylish": "~0.2.0",
@@ -49,6 +50,6 @@
     "modernizr": "Modernizr/Modernizr#v2.8.3"
   },
   "browser": {
-      "componentPrototype": "./Sources/JavaScript/Utilities/ComponentPrototype/Util.js"
+    "componentPrototype": "./Sources/JavaScript/Utilities/ComponentPrototype/Util.js"
   }
 }

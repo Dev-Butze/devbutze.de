@@ -67,4 +67,10 @@ Styleguide 3.8.1
   border-color: map-get($brand-colors, primary);
   color: #FFF;
   background: map-get($brand-colors, primary);
+
+  &:hover {
+    border-color: #FFF;
+    background: #FFF;
+    color: map-get($brand-colors, primary);
+  }
 }

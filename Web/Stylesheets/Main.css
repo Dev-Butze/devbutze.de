@@ -1,5 +1,5 @@
 /*!
-* Stylesheets for http://devbutze.de/ - Built on: 2015-01-27 
+* Stylesheets for http://devbutze.de/ - Built on: 2015-01-30 
 * 
 * @package devButze
 * @author Tyll Weiß <inkdpixels@gmail.com>
@@ -1814,6 +1814,11 @@ Styleguide 3.8.1
   color: #FFF;
   background: #5aca10;
 }
+.btn--solid:hover {
+  border-color: #FFF;
+  background: #FFF;
+  color: #5aca10;
+}
 
 /*
 Code & pre-formatted text elements
@@ -2280,6 +2285,7 @@ Styleguide 4.3.1
 }
 .stage__background,
 .stage__background > img {
+  display: block;
   width: 100%;
 }
 

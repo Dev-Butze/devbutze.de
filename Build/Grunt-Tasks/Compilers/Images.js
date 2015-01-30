@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('compile:images', function() {
 		// Prevent 'imagemin' from executing if the build gets tested on travis to suppress errors.
 		if(grunt.option('env') !== 'travis') {
-			grunt.task.run('imagemin');
+			grunt.task.run(['imagemin', 'responsive_images']);
 		}
 	});
 };

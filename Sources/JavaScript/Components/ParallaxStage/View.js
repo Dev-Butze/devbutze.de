@@ -65,7 +65,7 @@ ParallaxStage = componentPrototype.extend({
 
         var val = Math.round(scrollPos / (Math.abs(element.dataset.parallaxfactor) || 1));
 
-        setTransform(element, 'translateY(' + val + 'px)')
+        setTransform(element, 'translateY(' + val + 'px)');
 
         return this;
     }
