@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 	 * Compiles the complete site with dev options.
 	 */
 	grunt.registerTask('default', function() {
-		grunt.task.run(['compile:html', 'compile:css', 'compile:webfonts', 'jshint', 'compile:js']);
+		grunt.task.run('deploy');
 	});
 
 

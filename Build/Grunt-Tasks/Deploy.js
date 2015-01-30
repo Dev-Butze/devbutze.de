@@ -16,7 +16,10 @@ module.exports = function(grunt) {
 		// Compile the javascript.
 		grunt.task.run('compile:js:deploy');
 
-		// Generate a custom modernizr build.
-		grunt.task.run('modernizr:deploy');
+        // Generate the webFont json file.
+        grunt.task.run('compile:webfonts');
+
+        // Minify the html.
+        grunt.task.run('compile:html');
 	});
 };
