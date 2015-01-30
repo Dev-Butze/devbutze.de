@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		grunt.task.run('compile:css:deploy');
 
 		// Compile the javascript.
-		grunt.task.run('compile:js:deploy');
+		grunt.task.run(['compile:js:deploy', 'uglify']);
 
         // Generate the webFont json file.
         grunt.task.run('compile:webfonts');
