@@ -15,4 +15,5 @@ new WebFontJSONLoader({
 });
 
 // Require some polyfills
+require('./Vendor/Polyfills/Html5shiv.js');
 require('./Vendor/Polyfills/Picturefill.js');
