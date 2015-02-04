@@ -2,16 +2,19 @@
  * Head.min.js
  */
 
-var WebFontJSONLoader = require('./Utilities/WebFontJSONLoader/Util.js'),
+var WebFontJSONLoader = require('webfontjsonloader'),
     supportsWoff2 = require('./Utilities/Feature-Detects/Woff2.js'),
     webFontUrl = (supportsWoff2) ? 'WebFonts/DevButze.woff2.json': 'WebFonts/DevButze.woff.json';
 
 // Load the WebFont.
 new WebFontJSONLoader({
-	url: webFontUrl, // Path to the JSONP.
-	timeStamp: '?t=01152015', // Timestamp for the cache.
-	callbackName:  'devButzeAttachFonts', //JSONP callback name.
-	namespace: 'devButze' // localStorage namespace for the fonts.
+	url: webFontUrl,
+	timeStamp: '?t=01152015',
+    JSONPCallbackName:  'devButzeAttachFonts',
+	namespace: 'devButze',
+    callback: function() {
+        console.log('Whee')
+    }
 });
 
 // Require some polyfills

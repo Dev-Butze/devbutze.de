@@ -49,5 +49,8 @@
   },
   "browser": {
     "componentPrototype": "./Sources/JavaScript/Utilities/ComponentPrototype/Util.js"
+  },
+  "dependencies": {
+    "webfontjsonloader": "0.0.2"
   }
 }
