@@ -3,7 +3,8 @@
  * @description Require the main application modules.
  */
 
-var DomParser = require('./Utilities/DomParser/Parser.js'),
+var ScrollReveal = require('scrollReveal'),
+    DomParser = require('./Utilities/DomParser/Parser.js'),
     ComponentIndex = require('./Utilities/ComponentIndex/Util.js'),
     componentStore = new ComponentIndex(),
     componentParser;
@@ -30,3 +31,5 @@ componentParser = new DomParser({
         return instance;
     }
 }).parse();
+
+var scrollReveal = new ScrollReveal();
