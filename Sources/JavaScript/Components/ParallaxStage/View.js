@@ -1,4 +1,5 @@
 var componentPrototype = require('componentPrototype'),
+    forEach = require('./../../Utilities/Helpers').forEach,
     setTransform = require('./../../Utilities/Helpers').setTransform,
     ParallaxStage;
 
@@ -11,8 +12,6 @@ ParallaxStage = componentPrototype.extend({
     /**
      * initialize
      * @description Initializes the module.
-     * @param el {HTMLElement} The Element on which the parallax values will be based on.
-     * @param dataset {Object} The configuration objectfor the Component.
      * @returns {ParallaxStage}
      */
     initialize: function() {
@@ -35,6 +34,11 @@ ParallaxStage = componentPrototype.extend({
         return this;
     },
 
+    /**
+     * render
+     * @description Renders the state of the component, depending on the last scrolled position.
+     * @returns {ParallaxStage}
+     */
     render: function() {
         'use strict';
 
@@ -46,27 +50,56 @@ ParallaxStage = componentPrototype.extend({
         }
 
         this.set('lastScrollTop', currentScrollTop);
-        this.adjustPositions(currentScrollTop);
+        this.adjustTargetPositions(currentScrollTop);
 
         return this;
     },
-    adjustPositions: function(scrollTop) {
+
+    /**
+     * adjustTargetPositions
+     * @description Loops over each target node and calls the transform method to adjust it's position.
+     * @param scrollTop {Number} The current scroll position of the document/target node.
+     * @returns {ParallaxStage}
+     */
+    adjustTargetPositions: function(scrollTop) {
         'use strict';
 
         var stageOffset = this.el.offsetTop,
             scrollPos = scrollTop - stageOffset;
 
-        this.setElementsTransformValue(this.targets[0], scrollPos);
-        this.setElementsTransformValue(this.targets[1], scrollPos);
+        forEach(this.targets, function(index, item) {
+            var elementScrollPos = this.calculateElementsScrollPosition(item, scrollPos);
+
+            this.setElementsTransformValue(item, elementScrollPos);
+        }.bind(this));
 
         return this;
     },
+
+    /**
+     * calculateElementsScrollPosition
+     * @param element {HTMLElement} The node on which the calculation is based on.
+     * @param scrollPos {Number} The scroll position of the instance's node.
+     * @returns {number}
+     */
+    calculateElementsScrollPosition: function(element, scrollPos) {
+        'use strict';
+
+        var parallaxFactor = (Math.abs(element.dataset.parallaxfactor) || 1);
+
+        return Math.round(scrollPos / parallaxFactor);
+    },
+
+    /**
+     * setElementsTransformValue
+     * @param element {HTMLElement} The node on which the calculation is based on.
+     * @param scrollPos {Number} The scroll position of the instance's node.
+     * @returns {ParallaxStage}
+     */
     setElementsTransformValue: function(element, scrollPos) {
         'use strict';
 
-        var val = Math.round(scrollPos / (Math.abs(element.dataset.parallaxfactor) || 1));
-
-        setTransform(element, 'translateY(' + val + 'px)');
+        setTransform(element, 'translateY(' + scrollPos + 'px)');
 
         return this;
     }

@@ -1,37 +1,29 @@
-/*
- * App.min.js
- * @description Require the main application modules.
- */
-
 var ComponentDomParser = require("componentdomparser"),
     ScrollReveal = require('scrollReveal'),
     ComponentIndex = require('./Utilities/ComponentIndex/Util.js'),
-    componentStore = new ComponentIndex();
+    componentStore = new ComponentIndex(),
+    parser, scrollReveal;
 
-// Register the base modules.
+// Register the components.
 componentStore.register('classToggler', require('./Components/ClassToggler/View.js'));
 componentStore.register('parallaxStage', require('./Components/ParallaxStage/View.js'));
 componentStore.register('scrollTo', require('./Components/ScrollTo/View.js'));
 
-// Sets up the componentParser.
-var parser = new ComponentDomParser({
+// Sets up the componentDomParser and parse for all component nodes.
+parser = new ComponentDomParser({
     dataSelector: 'component', // Equals [data-component="*"]
     componentIndex: componentStore.getIndex(),
-    componentDidMountCallback: function(instance, el, dataset) {
+    componentDidMountCallback: function(instance) {
         'use strict';
 
         if(!instance.initialize) {
             return instance;
         }
 
-        // Initialize the module.
-        instance.initialize.call(instance, el, dataset);
+        instance.initialize();
 
         return instance;
     }
-});
+}).parse();
 
-// Parse the document for all [data-component] nodes.
-parser.parse();
-
-var scrollReveal = new ScrollReveal();
+scrollReveal = new ScrollReveal();

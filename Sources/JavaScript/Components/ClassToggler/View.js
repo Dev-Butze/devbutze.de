@@ -10,8 +10,6 @@ ClassToggler = componentPrototype.extend({
     /**
      * initialize
      * @description Initializes the module.
-     * @param el {HTMLElement} The Element on which the event listener will be mounted.
-     * @param dataset {Object} The configuration objectfor the Component.
      * @returns {ClassToggler}
      */
     initialize: function() {

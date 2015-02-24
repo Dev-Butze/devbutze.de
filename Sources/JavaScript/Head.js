@@ -1,7 +1,3 @@
-/*
- * Head.min.js
- */
-
 var WebFontJSONLoader = require('webfontjsonloader'),
     supportsWoff2 = require('./Utilities/Feature-Detects/Woff2.js'),
     webFontUrl = (supportsWoff2) ? 'WebFonts/DevButze.woff2.json': 'WebFonts/DevButze.woff.json';

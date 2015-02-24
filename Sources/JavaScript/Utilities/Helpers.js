@@ -65,6 +65,15 @@ var helpers = {
         // Return the modified object
         return target;
     },
+
+    forEach: function (array, callback, scope) {
+        'use strict';
+
+        for (var i = 0; i < array.length; i++) {
+            callback.call(scope, i, array[i]); // passes back stuff we need
+        }
+    },
+
     easeInOutQuad: function(currentTime, startValue, changedValue, duration) {
         'use strict';
 
@@ -77,6 +86,7 @@ var helpers = {
 
         return -changedValue / 2 * (currentTime * (currentTime - 2) - 1) + startValue;
     },
+
     setTransform: function(element, prop) {
         'use strict';
 
