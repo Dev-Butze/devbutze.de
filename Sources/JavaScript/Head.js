@@ -12,9 +12,7 @@ new WebFontJSONLoader({
 	timeStamp: '?t=01152015',
     JSONPCallbackName:  'devButzeAttachFonts',
 	namespace: 'devButze',
-    callback: function() {
-        console.log('Whee')
-    }
+    callback: function() {}
 });
 
 // Require some polyfills

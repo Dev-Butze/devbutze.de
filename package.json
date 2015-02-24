@@ -51,6 +51,7 @@
     "componentPrototype": "./Sources/JavaScript/Utilities/ComponentPrototype/Util.js"
   },
   "dependencies": {
+    "componentdomparser": "0.0.1",
     "webfontjsonloader": "0.0.2"
   }
 }

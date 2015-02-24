@@ -3,11 +3,10 @@
  * @description Require the main application modules.
  */
 
-var ScrollReveal = require('scrollReveal'),
-    DomParser = require('./Utilities/DomParser/Parser.js'),
+var ComponentDomParser = require("componentdomparser"),
+    ScrollReveal = require('scrollReveal'),
     ComponentIndex = require('./Utilities/ComponentIndex/Util.js'),
-    componentStore = new ComponentIndex(),
-    componentParser;
+    componentStore = new ComponentIndex();
 
 // Register the base modules.
 componentStore.register('classToggler', require('./Components/ClassToggler/View.js'));
@@ -15,10 +14,10 @@ componentStore.register('parallaxStage', require('./Components/ParallaxStage/Vie
 componentStore.register('scrollTo', require('./Components/ScrollTo/View.js'));
 
 // Sets up the componentParser.
-componentParser = new DomParser({
-    constructors: componentStore.getIndex(),
-    selector: 'component', // Equals [data-component="*"]
-    defaultCallback: function(instance, el, dataset) {
+var parser = new ComponentDomParser({
+    dataSelector: 'component', // Equals [data-component="*"]
+    componentIndex: componentStore.getIndex(),
+    componentDidMountCallback: function(instance, el, dataset) {
         'use strict';
 
         if(!instance.initialize) {
@@ -30,6 +29,9 @@ componentParser = new DomParser({
 
         return instance;
     }
-}).parse();
+});
+
+// Parse the document for all [data-component] nodes.
+parser.parse();
 
 var scrollReveal = new ScrollReveal();

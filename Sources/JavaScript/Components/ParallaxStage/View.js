@@ -15,10 +15,11 @@ ParallaxStage = componentPrototype.extend({
      * @param dataset {Object} The configuration objectfor the Component.
      * @returns {ParallaxStage}
      */
-    initialize: function(el, dataset) {
+    initialize: function() {
         'use strict';
 
-        this.el = el;
+        var dataset = this.el.dataset;
+
         this.targets = document.querySelectorAll(dataset.target || '[data-parallax]');
         this.set('lastScrollTop', 0);
 

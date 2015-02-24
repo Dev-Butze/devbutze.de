@@ -108,7 +108,8 @@ var Prototype = {
             obj = obj ? obj : {};
 
             // Create an empty function wrapper.
-            var Constructor = function() {
+            var Constructor = function(el) {
+                this.el = el;
                 this.attributes = {};
             };
 

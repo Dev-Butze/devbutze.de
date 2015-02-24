@@ -15,10 +15,11 @@ ScrollTo = componentPrototype.extend({
      * @param dataset {Object} The configuration objectfor the Component.
      * @returns {ScrollTo}
      */
-    initialize: function(el, dataset) {
+    initialize: function() {
         'use strict';
 
-        this.el = el;
+        var dataset = this.el.dataset;
+
         this.target = document.querySelectorAll(dataset.target)[0];
         this.set('duration', dataset.duration || 600);
 
